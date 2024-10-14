@@ -8,49 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        /* Center the photo.jpg image */
-        .centered-image {
-            text-align: center;
-        }
-
-        .centered-image img {
-            max-width: 100%;
-            height: auto;
-            display: inline-block;
-        }
-
-        /* Button styles */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Additional spacing between projects and learning items */
-        .project, .learning-item {
-            margin-bottom: 40px;
-        }
-
-        /* Make banner image smaller */
-        .banner img {
-            width: 100%; /* Keeps the image responsive */
-            max-height: 200px; /* Adjust the height as needed */
-            object-fit: cover; /* Ensures the image covers the banner area neatly */
-        }
-    </style>
 </head>
 <body>
     <!-- Layout with sidebar and main content -->
     <div class="layout">
         <!-- Sidebar -->
         <aside class="sidebar" role="navigation" aria-label="Main Navigation">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -168,5 +134,12 @@
             </footer>
         </main>
     </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
