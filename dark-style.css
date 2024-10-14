@@ -1,0 +1,72 @@
+/* General styles for dark mode body and typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text for readability */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for consistent layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #2a2a2a; /* Slightly lighter dark background */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+/* Headings and paragraphs */
+h1, h2, p {
+    color: #ffffff; /* Light text color */
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: #1e90ff; /* Bright blue link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Center the photo.jpg image */
+.centered-image {
+    text-align: center;
+}
+
+.centered-image img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+/* Dark banner styling */
+.banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Lists */
+ul {
+    color: #ffffff; /* White text in lists */
+    padding-left: 20px;
+}
+

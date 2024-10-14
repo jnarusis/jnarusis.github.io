@@ -1,0 +1,213 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and layout styling */
+body {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text for contrast */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e; /* Darker sidebar for differentiation */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Main content and banner */
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+/* Section styling */
+.section {
+    background-color: #1e1e1e;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.section h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.section p {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    margin-top: 15px; /* Reduced margin-top to decrease space above button */
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #004c99;
+    transform: translateY(-3px);
+}
+
+.button + h3,
+.button + h2 {
+    margin-top: 40px; /* Increased space between button and next heading */
+}
+
+/* Contact links styling */
+.contact-links {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-links li {
+    margin-bottom: 10px;
+}
+
+.contact-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #ffffff;
+}
+
+/* Footer styling */
+.footer {
+    padding: 20px 0;
+    background-color: #121212;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer p {
+    color: #b3b3b3;
+}
+
+.footer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Headings styling */
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .skills-list {
+        margin: 0;
+    }
+}
