@@ -31,6 +31,19 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Hamburger button styling */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .sidebar nav ul {
     list-style-type: none;
     padding-left: 0;
@@ -105,7 +118,7 @@ body {
 /* Button styling */
 .button {
     display: inline-block;
-    margin-top: 15px; /* Reduced margin-top to decrease space above button */
+    margin-top: 15px;
     padding: 10px 20px;
     background-color: #0066cc;
     color: white;
@@ -192,22 +205,25 @@ h3 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .layout {
-        flex-direction: column;
+    .menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
     }
 
     .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
+        position: fixed;
+        left: -250px; /* Hide sidebar off-screen */
+        transition: left 0.3s ease-in-out;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        background-color: #1e1e1e;
+    }
+
+    .sidebar.open {
+        left: 0; /* Show sidebar */
     }
 
     .main-content {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .skills-list {
-        margin: 0;
+        margin-left: 0; /* Ensure main content takes full width */
     }
 }
