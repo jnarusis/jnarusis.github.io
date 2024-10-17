@@ -14,7 +14,6 @@
         .centered-image {
             text-align: center;
         }
-
         .centered-image img {
             max-width: 100%;
             height: auto;
@@ -40,9 +39,9 @@
 
         /* Make banner image smaller */
         .banner img {
-            width: 100%; /* Keeps the image responsive */
-            max-height: 200px; /* Adjust the height as needed */
-            object-fit: cover; /* Ensures the image covers the banner area neatly */
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -65,7 +64,7 @@
 
         <!-- Main Content Area -->
         <main class="main-content">
-            <!-- Banner image inside the main content -->
+            <!-- Banner image -->
             <div class="banner">
                 <img src="banner.jpg" alt="Portfolio Banner">
             </div>
@@ -117,7 +116,7 @@
                     <div class="project">
                         <h3>Project 1: Personal Portfolio Website</h3>
                         <p>Successfully developed and deployed my personal portfolio website using HTML, CSS, and JavaScript. I designed a modern and responsive layout that ensures a seamless user experience across devices. Utilizing GitHub Pages for hosting and version control with Git, I gained valuable hands-on experience in front-end web development, as well as working with dynamic elements like project showcases, learning journeys, and contact forms.</p>
-                        <a href="https://jnarusis.github.io/project1.html" class="button">View Project</a>
+                        <a href="project1.html" class="button">View Project</a>
                     </div>
                     <div class="project">
                         <h3>Project 2: Internet-in-a-Box Deployment</h3>
@@ -156,327 +155,8 @@
                     <li>LinkedIn: <a href="https://linkedin.com/in/justinnarusis" target="_blank">linkedin.com/in/justinnarusis</a></li>
                     <li>GitHub: <a href="https://github.com/jnarusis" target="_blank">github.com/jnarusis</a></li>
                 </ul>
-Here is the **complete index.html** file with your updated **Project 1** and the footer code included:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Justin Narusis - Personal Portfolio showcasing IT journey, projects, skills, and learning.">
-    <title>Justin Narusis - Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        /* Center the photo.jpg image */
-        .centered-image {
-            text-align: center;
-        }
-
-        .centered-image img {
-            max-width: 100%;
-            height: auto;
-            display: inline-block;
-        }
-
-        /* Button styles */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Additional spacing between projects and learning items */
-        .project, .learning-item {
-            margin-bottom: 40px;
-        }
-
-        /* Make banner image smaller */
-        .banner img {
-            width: 100%; /* Keeps the image responsive */
-            max-height: 200px; /* Adjust the height as needed */
-            object-fit: cover; /* Ensures the image covers the banner area neatly */
-        }
-    </style>
-</head>
-<body>
-    <!-- Layout with sidebar and main content -->
-    <div class="layout">
-        <!-- Sidebar -->
-        <aside class="sidebar" role="navigation" aria-label="Main Navigation">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Learning Journey</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Banner image inside the main content -->
-            <div class="banner">
-                <img src="banner.jpg" alt="Portfolio Banner">
-            </div>
-
-            <!-- Home section -->
-            <section id="home" class="section">
-                <h1>Welcome to My Personal Portfolio</h1>
-                <p>Hello! I'm <strong>Justin Narusis</strong>, an aspiring System Administrator transitioning from a career in social work to the dynamic field of Information Technology. I'm passionate about leveraging my strong problem-solving skills and understanding of human-centered systems to create efficient and secure technological solutions.</p>
             </section>
 
-            <!-- Centered Image above About Me -->
-            <div class="centered-image">
-                <img src="photo.jpg" alt="Justin Narusis Photo">
-            </div>
-
-            <!-- About Me section -->
-            <section id="about" class="section">
-                <h2>About Me</h2>
-                <p>With a strong background in social work and psychology, I bring a unique perspective to the field of IT and cybersecurity. My experience in understanding complex human systems allows me to approach technological challenges with empathy and strategic thinking.</p>
-                <p>Currently, I am focusing on cloud-based systems administration and networking, working toward certifications such as <strong>CompTIA A+</strong> and <strong>MS-900 Microsoft 365 Fundamentals</strong>. I have completed the <strong>Cisco Networking Basics</strong> badge and am steadily advancing my skills in cloud technologies like <strong>AWS</strong> and <strong>Azure</strong>.</p>
-                <p>My ultimate goal is to become a cybersecurity expert, leveraging both my technical expertise and my understanding of human behavior to secure and optimize digital environments. This portfolio showcases my projects, tracks my progress, and reflects the skills I am gaining along the way.</p>
-            </section>
-
-            <!-- Technical Skills Section -->
-            <section id="skills" class="section">
-                <h2>Technical Skills</h2>
-                <div style="height: 20px;"></div> <!-- Add spacing after heading -->
-                <div class="skills-container">
-                    <ul class="skills-list">
-                        <li>Operating Systems: Windows 7/8/10/11, macOS, Linux (Ubuntu, Arch)</li>
-                        <li>Networking: VPNs (OpenVPN, WireGuard), VLANs, DNS (Pi-hole, BIND, Unbound), Firewall configuration (pfSense, UFW, iptables), Network monitoring (Wireshark, Nagios, Zabbix), Wireless networking (Ubiquiti UniFi, DD-WRT, OpenWRT)</li>
-                        <li>Intrusion Detection and Prevention Systems: Snort, Suricata</li>
-                        <li>Network Access Control: FreeRADIUS, PacketFence</li>
-                        <li>Hardware and Software: Installation and configuration, Printers, scanners, mobile devices, IoT devices, Hard drive imaging, Microsoft Office Suite, Office 365, Google Suite</li>
-                        <li>Virtualization: VMware, VirtualBox</li>
-                        <li>Containerization: Docker</li>
-                        <li>Scripting and Programming: BASH scripting, Python, PowerShell</li>
-                        <li>Technical Support: Troubleshooting and diagnostics, Customer service excellence, Service ticket management, User account management, Training and technical communication, Remote technical support</li>
-                        <li>Project Management: IT projects, equipment setup, data analysis</li>
-                        <li>Cybersecurity: Network security, access controls, Content filtering and parental controls, Intrusion detection and prevention</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Portfolio section -->
-            <section id="portfolio" class="section">
-                <h2>Portfolio</h2>
-                <div class="projects">
-                    <div class="project">
-                        <h3>Project 1: Personal Portfolio Website</h3>
-                        <p>Successfully developed and deployed my personal portfolio website using HTML, CSS, and JavaScript. I designed a modern and responsive layout that ensures a seamless user experience across devices. Utilizing GitHub Pages for hosting and version control with Git, I gained valuable hands-on experience in front-end web development, as well as working with dynamic elements like project showcases, learning journeys, and contact forms.</p>
-                        <a href="https://jnarusis.github.io/project1.html" class="button">View Project</a>
-                    </div>
-                    <div class="project">
-                        <h3>Project 2: Internet-in-a-Box Deployment</h3>
-                        <p>Repurposed hardware to create an 'Internet-in-a-Box' by installing and configuring a local content server. Loaded the server with over 10TB of educational resources, accessible via a local network without internet connectivity. This project enhanced my skills in server setup, network configuration, and data management.</p>
-                        <a href="project2.html" class="button">View Project</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blog section -->
-            <section id="blog" class="section">
-                <h2>Learning Journey</h2>
-                <p>Below are my documented certifications, learning experiences, and career growth:</p>
-                <div class="learning-item">
-                    <h3>Setting Up a Blog Site: A Learning Journey in IT</h3>
-                    <p>Documented the process of setting up my own blog site using various web technologies, enhancing my understanding of web hosting, domain management, and content creation.</p>
-                    <a href="setting_up_blog_site.html" class="button">Read More</a>
-                </div>
-                <div class="learning-item">
-                    <h3>Earning the Cisco Networking Basics Badge</h3>
-                    <p>Shared my experience studying for and earning the Cisco Networking Basics badge, covering network protocols, topologies, and basic configurations.</p>
-                    <a href="cisco_badge_experience.html" class="button">Read More</a>
-                </div>
-                <div class="learning-item">
-                    <h3>MS-900 Microsoft 365 Fundamentals Exam</h3>
-                    <p>Detailed my preparation for and passing of the MS-900 exam, including learning about cloud concepts, core Microsoft 365 services, security, compliance, and trust.</p>
-                    <a href="ms900.html" class="button">Read More</a>
-                </div>
-            </section>
-
-            <!-- Contact section -->
-            <section id="contact" class="section">
-                <h2>Contact Me</h2>
-                <p>Feel free to connect with me on LinkedIn and GitHub.</p>
-                <ul class="contact-links">
-                    <li>LinkedIn: <a href="https://linkedin.com/in/justinnarusis" target="_blank">linkedin.com/in/justinnarusis</a></li>
-                    <li>GitHub: <a href="https://github.com/jnarusis" target="_blank">github.com/jnarusis</a></li>
-                </ul>
-           Here is your complete **index.html** with the requested updates, including the **Project 1** description and footer:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Justin Narusis - Personal Portfolio showcasing IT journey, projects, skills, and learning.">
-    <title>Justin Narusis - Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        /* Center the photo.jpg image */
-        .centered-image {
-            text-align: center;
-        }
-
-        .centered-image img {
-            max-width: 100%;
-            height: auto;
-            display: inline-block;
-        }
-
-        /* Button styles */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Additional spacing between projects and learning items */
-        .project, .learning-item {
-            margin-bottom: 40px;
-        }
-
-        /* Make banner image smaller */
-        .banner img {
-            width: 100%; /* Keeps the image responsive */
-            max-height: 200px; /* Adjust the height as needed */
-            object-fit: cover; /* Ensures the image covers the banner area neatly */
-        }
-    </style>
-</head>
-<body>
-    <!-- Layout with sidebar and main content -->
-    <div class="layout">
-        <!-- Sidebar -->
-        <aside class="sidebar" role="navigation" aria-label="Main Navigation">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Learning Journey</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Banner image inside the main content -->
-            <div class="banner">
-                <img src="banner.jpg" alt="Portfolio Banner">
-            </div>
-
-            <!-- Home section -->
-            <section id="home" class="section">
-                <h1>Welcome to My Personal Portfolio</h1>
-                <p>Hello! I'm <strong>Justin Narusis</strong>, an aspiring System Administrator transitioning from a career in social work to the dynamic field of Information Technology. I'm passionate about leveraging my strong problem-solving skills and understanding of human-centered systems to create efficient and secure technological solutions.</p>
-            </section>
-
-            <!-- Centered Image above About Me -->
-            <div class="centered-image">
-                <img src="photo.jpg" alt="Justin Narusis Photo">
-            </div>
-
-            <!-- About Me section -->
-            <section id="about" class="section">
-                <h2>About Me</h2>
-                <p>With a strong background in social work and psychology, I bring a unique perspective to the field of IT and cybersecurity. My experience in understanding complex human systems allows me to approach technological challenges with empathy and strategic thinking.</p>
-                <p>Currently, I am focusing on cloud-based systems administration and networking, working toward certifications such as <strong>CompTIA A+</strong> and <strong>MS-900 Microsoft 365 Fundamentals</strong>. I have completed the <strong>Cisco Networking Basics</strong> badge and am steadily advancing my skills in cloud technologies like <strong>AWS</strong> and <strong>Azure</strong>.</p>
-                <p>My ultimate goal is to become a cybersecurity expert, leveraging both my technical expertise and my understanding of human behavior to secure and optimize digital environments. This portfolio showcases my projects, tracks my progress, and reflects the skills I am gaining along the way.</p>
-            </section>
-
-            <!-- Technical Skills Section -->
-            <section id="skills" class="section">
-                <h2>Technical Skills</h2>
-                <div style="height: 20px;"></div> <!-- Add spacing after heading -->
-                <div class="skills-container">
-                    <ul class="skills-list">
-                        <li>Operating Systems: Windows 7/8/10/11, macOS, Linux (Ubuntu, Arch)</li>
-                        <li>Networking: VPNs (OpenVPN, WireGuard), VLANs, DNS (Pi-hole, BIND, Unbound), Firewall configuration (pfSense, UFW, iptables), Network monitoring (Wireshark, Nagios, Zabbix), Wireless networking (Ubiquiti UniFi, DD-WRT, OpenWRT)</li>
-                        <li>Intrusion Detection and Prevention Systems: Snort, Suricata</li>
-                        <li>Network Access Control: FreeRADIUS, PacketFence</li>
-                        <li>Hardware and Software: Installation and configuration, Printers, scanners, mobile devices, IoT devices, Hard drive imaging, Microsoft Office Suite, Office 365, Google Suite</li>
-                        <li>Virtualization: VMware, VirtualBox</li>
-                        <li>Containerization: Docker</li>
-                        <li>Scripting and Programming: BASH scripting, Python, PowerShell</li>
-                        <li>Technical Support: Troubleshooting and diagnostics, Customer service excellence, Service ticket management, User account management, Training and technical communication, Remote technical support</li>
-                        <li>Project Management: IT projects, equipment setup, data analysis</li>
-                        <li>Cybersecurity: Network security, access controls, Content filtering and parental controls, Intrusion detection and prevention</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Portfolio section -->
-            <section id="portfolio" class="section">
-                <h2>Portfolio</h2>
-                <div class="projects">
-                    <div class="project">
-                        <h3>Project 1: Personal Portfolio Website</h3>
-                        <p>Successfully developed and deployed my personal portfolio website using HTML, CSS, and JavaScript. I designed a modern and responsive layout that ensures a seamless user experience across devices. Utilizing GitHub Pages for hosting and version control with Git, I gained valuable hands-on experience in front-end web development, as well as working with dynamic elements like project showcases, learning journeys, and contact forms.</p>
-                        <a href="https://jnarusis.github.io/project1.html" class="button">View Project</a>
-                    </div>
-                    <div class="project">
-                        <h3>Project 2: Internet-in-a-Box Deployment</h3>
-                        <p>Repurposed hardware to create an 'Internet-in-a-Box' by installing and configuring a local content server. Loaded the server with over 10TB of educational resources, accessible via a local network without internet connectivity. This project enhanced my skills in server setup, network configuration, and data management.</p>
-                        <a href="project2.html" class="button">View Project</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blog section -->
-            <section id="blog" class="section">
-                <h2>Learning Journey</h2>
-                <p>Below are my documented certifications, learning experiences, and career growth:</p>
-                <div class="learning-item">
-                    <h3>Setting Up a Blog Site: A Learning Journey in IT</h3>
-                    <p>Documented the process of setting up my own blog site using various web technologies, enhancing my understanding of web hosting, domain management, and content creation.</p>
-                    <a href="setting_up_blog_site.html" class="button">Read More</a>
-                </div>
-                <div class="learning-item">
-                    <h3>Earning the Cisco Networking Basics Badge</h3>
-                    <p>Shared my experience studying for and earning the Cisco Networking Basics badge, covering network protocols, topologies, and basic configurations.</p>
-                    <a href="cisco_badge_experience.html" class="button">Read More</a>
-                </div>
-                <div class="learning-item">
-                    <h3>MS-900 Microsoft 365 Fundamentals Exam</h3>
-                    <p>Detailed my preparation for and passing of the MS-900 exam, including learning about cloud concepts, core Microsoft 365 services, security, compliance, and trust.</p>
-                    <a href="ms900.html" class="button">Read More</a>
-                </div>
-            </section>
-
-            <!-- Contact section -->
-            <section id="contact" class="section">
-                <h2>Contact Me</h2>
-                <p>Feel free to connect with me on LinkedIn and GitHub.</p>
-                <ul class="contact-links">
-                    <li>LinkedIn: <a href="https://linkedin.com/in/justinnarusis" target="_blank">linkedin.com/in/justinnarusis</a></li>
-                    <li>GitHub: <a href="https://github.com/jnarusis" target="_blank">github.com/jnarusis</a></li>
-                </ul>
-
-                
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2024 Justin Narusis | 
