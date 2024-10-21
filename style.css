@@ -69,6 +69,20 @@ body {
     margin-bottom: 20px;
 }
 
+/* Centered Image Styling */
+.centered-image {
+    text-align: center;
+}
+
+.centered-image img {
+    max-width: 400px;  /* Limit the maximum width to 400px */
+    width: 100%;       /* Ensure it stays responsive */
+    height: auto;      /* Maintain the aspect ratio */
+    display: inline-block;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
 /* Section styling */
 .section {
     background-color: #1e1e1e;
