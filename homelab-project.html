@@ -20,6 +20,10 @@
           <li><a href="#step4">Step 4: Group Policy</a></li>
           <li><a href="#step5">Step 5: Domain Join</a></li>
           <li><a href="#step6">Step 6: Configure DHCP</a></li>
+          <li><a href="#step7">Step 7: Configure WSUS</a></li>
+          <li><a href="#step8">Step 8: Apply WSUS GPO</a></li>
+          <li><a href="#step9">Step 9: File Services</a></li>
+          <li><a href="#step10">Step 10: Final Overview</a></li>
           <li><a href="index.html#portfolio">← Back to Portfolio</a></li>
         </ul>
       </nav>
@@ -33,10 +37,12 @@
 
       <section id="overview" class="section">
         <h1>Homelab Project</h1>
-        <p>This hands-on homelab simulates a real-world IT environment using Hyper-V and Windows Server 2022. It includes domain services, Group Policy, DHCP, and client management on a local internal domain (<code>lab.local</code>). This setup allows me to practice systems administration and demonstrate IT infrastructure fundamentals.</p>
+        <p>This hands-on homelab simulates a real-world IT environment using Hyper-V and Windows Server 2022. It includes domain services, Group Policy, DHCP, WSUS, File Sharing, and client management on a local internal domain (<code>lab.local</code>). This setup allowed me to practice systems administration, client policy management, and update deployment in a realistic lab scenario.</p>
         <div class="image-frame">
-          <img src="homelab-images/homelab-overview-placeholder.png" alt="Homelab overview placeholder" class="content-image">
-          <p class="image-caption">Overview of lab environment – placeholder image will be replaced upon completion of project</p>
+          <a href="homelab-images/step10-servermanager-summary.png" target="_blank">
+            <img src="homelab-images/step10-servermanager-summary.png" alt="Server Manager Summary" class="content-image">
+          </a>
+          <p class="image-caption">Final overview showing installed roles and services on DC01</p>
         </div>
       </section>
 
@@ -161,10 +167,85 @@
   </div>
 </section>
 
-      <footer class="footer">
-        <p><a href="index.html">&larr; Back to Main Site</a></p>
-      </footer>
-    </main>
-  </div>
+  <!-- STEP 7 -->
+  <section id="step7" class="section">
+    <h2>📦 Step 7: Configure WSUS Server</h2>
+    <p><strong>Objective:</strong> Install and configure Windows Server Update Services (WSUS) on <code>DC01</code> to centrally manage Windows updates.</p>
+    <ul>
+      <li>Installed WSUS role and required features</li>
+      <li>Set local content path to <code>C:\WSUS</code></li>
+      <li>Completed configuration wizard and initial sync</li>
+      <li>Created target group: <code>Lab Computers</code></li>
+    </ul>
+    <div class="screenshot-grid">
+      <a href="homelab-images/step8-create-wsus-gpo.png" target="_blank"><img src="homelab-images/step8-create-wsus-gpo.png" alt="Creating WSUS Group Policy" class="content-image"></a>
+      <a href="homelab-images/step8-wsus-location-setting.png" target="_blank"><img src="homelab-images/step8-wsus-location-setting.png" alt="WSUS Location Setting" class="content-image"></a>
+      <a href="homelab-images/step10-wsus-status.png" target="_blank"><img src="homelab-images/step10-wsus-status.png" alt="WSUS Status" class="content-image"></a>
+    </div>
+  </section>
+
+  <!-- STEP 8 -->
+  <section id="step8" class="section">
+    <h2>📄 Step 8: Apply WSUS Group Policy</h2>
+    <p><strong>Objective:</strong> Create and apply a GPO that redirects lab clients to the internal WSUS server for updates.</p>
+    <ul>
+      <li>Created GPO: <code>WSUS_Lab_Clients</code></li>
+      <li>Set "Specify intranet Microsoft update service location" to <code>http://DC01</code></li>
+      <li>(Optional) Enabled client-side targeting</li>
+      <li>Linked GPO to <code>TestComputers</code> OU</li>
+      <li>Confirmed policy applied via gpresult and Windows Update settings</li>
+    </ul>
+    <div class="screenshot-grid">
+      <a href="homelab-images/step8-client-side-targeting.png" target="_blank"><img src="homelab-images/step8-client-side-targeting.png" alt="Client-Side Targeting" class="content-image"></a>
+      <a href="homelab-images/step8-link-gpo-ou.png" target="_blank"><img src="homelab-images/step8-link-gpo-ou.png" alt="Link GPO to OU" class="content-image"></a>
+      <a href="homelab-images/step8-client-update-confirm.png" target="_blank"><img src="homelab-images/step8-client-update-confirm.png" alt="Client Update Confirmation" class="content-image"></a>
+    </div>
+  </section>
+
+  <!-- STEP 9 -->
+  <section id="step9" class="section">
+    <h2>📂 Step 9: Configure File Services</h2>
+    <p><strong>Objective:</strong> Set up a shared folder accessible by all domain users and verify access from Client01.</p>
+    <ul>
+      <li>Verified File Server role was installed</li>
+      <li>Created folder: <code>C:\Shares\SharedFiles</code></li>
+      <li>Shared folder with Domain Users (Read + Change)</li>
+      <li>Set NTFS permissions for Domain Users</li>
+      <li>Confirmed successful network access from Client01</li>
+    </ul>
+    <div class="screenshot-grid">
+      <a href="homelab-images/step9-file-role-install.png" target="_blank"><img src="homelab-images/step9-file-role-install.png" alt="File Services Role Installed" class="content-image"></a>
+      <a href="homelab-images/step9-folder-created.png" target="_blank"><img src="homelab-images/step9-folder-created.png" alt="Folder Created" class="content-image"></a>
+      <a href="homelab-images/step9-share-permissions.png" target="_blank"><img src="homelab-images/step9-share-permissions.png" alt="Share Permissions" class="content-image"></a>
+      <a href="homelab-images/step9-ntfs-permissions.png" target="_blank"><img src="homelab-images/step9-ntfs-permissions.png" alt="NTFS Permissions" class="content-image"></a>
+      <a href="homelab-images/step9-client-access.png" target="_blank"><img src="homelab-images/step9-client-access.png" alt="Client Accessing Share" class="content-image"></a>
+    </div>
+  </section>
+
+  <!-- STEP 10 -->
+  <section id="step10" class="section">
+    <h2>📟 Step 10: Final Lab Overview</h2>
+    <p><strong>Objective:</strong> Verify core services and document system status after all configurations are complete.</p>
+    <ul>
+      <li>Confirmed AD OU structure and user accounts</li>
+      <li>Verified DHCP lease for Client01</li>
+      <li>Viewed WSUS sync success and setup status</li>
+      <li>Accessed file share from Client01 as domain user</li>
+      <li>Reviewed Server Manager summary of installed roles</li>
+    </ul>
+    <div class="screenshot-grid">
+      <a href="homelab-images/step10-ad-structure.png" target="_blank"><img src="homelab-images/step10-ad-structure.png" alt="AD OU Structure" class="content-image"></a>
+      <a href="homelab-images/step10-dhcp-lease.png" target="_blank"><img src="homelab-images/step10-dhcp-lease.png" alt="DHCP Lease Confirmed" class="content-image"></a>
+      <a href="homelab-images/step10-wsus-status.png" target="_blank"><img src="homelab-images/step10-wsus-status.png" alt="WSUS Sync Status" class="content-image"></a>
+      <a href="homelab-images/step10-client-confirmation.png" target="_blank"><img src="homelab-images/step10-client-confirmation.png" alt="Client Access Confirmation" class="content-image"></a>
+      <a href="homelab-images/step10-servermanager-summary.png" target="_blank"><img src="homelab-images/step10-servermanager-summary.png" alt="Server Roles Overview" class="content-image"></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><a href="index.html">← Back to Main Site</a></p>
+  </footer>
+</main>
+</div>
 </body>
 </html>
