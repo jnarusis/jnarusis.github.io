@@ -82,7 +82,7 @@ body {
 .centered-profile {
   display: inline-block;
   width: 100%;
-  margin: 0 0 40px 0;
+  margin-bottom: 20px; /* reduced from 40px for tighter layout */
   padding: 0;
   text-align: left;
 }
@@ -98,7 +98,12 @@ body {
 
 /* Section styling */
 .section {
+  margin-top: 20px;  /* tightened top margin */
   margin-bottom: 40px;
+}
+
+#about {
+  margin-top: 10px; /* even tighter margin for balance under home */
 }
 
 h1, h2, h3 {
@@ -150,6 +155,12 @@ ul {
   padding: 20px;
   border-radius: 8px;
   background-color: #181818;
+}
+
+.project:hover {
+  border-color: #555;
+  background-color: #202020;
+  transition: all 0.2s ease;
 }
 
 /* Contact links */
@@ -244,4 +255,11 @@ ul {
   font-size: 0.9em;
   color: #aaa;
   margin-top: 8px;
+}
+
+/* Horizontal rule for section break styling */
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 0.5rem 0 1.5rem;
 }
