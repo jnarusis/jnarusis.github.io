@@ -10,24 +10,47 @@
 </head>
 <body>
   <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar" role="navigation" aria-label="Page Navigation">
-      <nav>
-        <ul>
-          <li><a href="#step1">Step 1: Create VM</a></li>
-          <li><a href="#step2">Step 2: Domain Controller</a></li>
-          <li><a href="#step3">Step 3: Active Directory</a></li>
-          <li><a href="#step4">Step 4: Group Policy</a></li>
-          <li><a href="#step5">Step 5: Domain Join</a></li>
-          <li><a href="#step6">Step 6: Configure DHCP</a></li>
-          <li><a href="#step7">Step 7: Configure WSUS</a></li>
-          <li><a href="#step8">Step 8: Apply WSUS GPO</a></li>
-          <li><a href="#step9">Step 9: File Services</a></li>
-          <li><a href="#step10">Step 10: Final Overview</a></li>
-          <li><a href="../index.html#portfolio">← Back to Portfolio</a></li>
-        </ul>
-      </nav>
-    </aside>
+  
+ <aside class="sidebar" role="navigation" aria-label="Page Navigation">
+  <nav>
+    <details open>
+      <summary><strong>Homelab Setup</strong></summary>
+      <ul>
+        <li><a href="#step1">Step 1</a></li>
+        <li><a href="#step2">Step 2</a></li>
+        <li><a href="#step3">Step 3</a></li>
+        <li><a href="#step4">Step 4</a></li>
+        <li><a href="#step5">Step 5</a></li>
+        <li><a href="#step6">Step 6</a></li>
+        <li><a href="#step7">Step 7</a></li>
+        <li><a href="#step8">Step 8</a></li>
+        <li><a href="#step9">Step 9</a></li>
+        <li><a href="#step10">Step 10</a></li>
+      </ul>
+    </details>
+
+    <details open>
+      <summary><strong>Admin Scenarios</strong></summary>
+      <ul>
+        <li><a href="#step11">Step 11</a></li>
+        <li><a href="#step12">Step 12</a></li>
+        <li><a href="#step13">Step 13</a></li>
+        <li><a href="#step14">Step 14</a></li>
+        <li><a href="#step15">Step 15</a></li>
+        <li><a href="#step16">Step 16</a></li>
+        <li><a href="#step17">Step 17</a></li>
+        <li><a href="#step18">Step 18</a></li>
+        <li><a href="#step19">Step 19</a></li>
+        <li><a href="#step20">Step 20</a></li>
+      </ul>
+    </details>
+
+   <ul>
+  <li><a href="#downloads">Script Downloads</a></li>
+  <li><a href="../index.html#portfolio">← Back to Portfolio</a></li>
+</ul>
+  </nav>
+</aside>
 
     <!-- Main content -->
     <main class="main-content">
@@ -48,7 +71,7 @@
 
 <!-- STEP 1 -->
 <section id="step1" class="section">
-  <h2>🧱 Step 1: Create New Virtual Machine</h2>
+  <h2>Step 1: Create New Virtual Machine</h2>
   <p><strong>Objective:</strong> Set up a new virtual machine in Hyper-V for Windows Server 2022.</p>
   <ul>
     <li>Created a dynamically expanding virtual disk</li>
@@ -69,7 +92,7 @@
 
 <!-- STEP 2 -->
 <section id="step2" class="section">
-  <h2>🛠️ Step 2: Configuring Windows Server as a Domain Controller</h2>
+  <h2>Step 2: Configuring Windows Server as a Domain Controller</h2>
   <p><strong>Objective:</strong> Install and configure Active Directory Domain Services (AD DS) on Windows Server 2022. Set up a new domain environment <code>lab.local</code>.</p>
   <ul>
     <li>Renamed server to <code>DC01</code></li>
@@ -89,7 +112,7 @@
 
 <!-- STEP 3 -->
 <section id="step3" class="section">
-  <h2>📁 Step 3: Active Directory Setup: OUs, Users, and Groups</h2>
+  <h2>Step 3: Active Directory Setup: OUs, Users, and Groups</h2>
   <p><strong>Objective:</strong> Design a simple Active Directory structure for user and group management using Organizational Units and Security Groups.</p>
   <ul>
     <li>Created OUs: <code>Users</code>, <code>IT</code>, <code>HR</code>, <code>TestComputers</code></li>
@@ -107,7 +130,7 @@
 
 <!-- STEP 4 -->
 <section id="step4" class="section">
-  <h2>🧙 Step 4: Group Policy Setup: Login Banner for HR OU</h2>
+  <h2>Step 4: Group Policy Setup: Login Banner for HR OU</h2>
   <p><strong>Objective:</strong> Apply a custom login banner to users in the HR OU via Group Policy.</p>
   <ul>
     <li>Created and linked GPO: <code>HR_Login_Banner</code></li>
@@ -125,7 +148,7 @@
 
 <!-- STEP 5 -->
 <section id="step5" class="section">
-  <h2>🧩 Step 5: Join a Windows Client to the Domain</h2>
+  <h2>Step 5: Join a Windows Client to the Domain</h2>
   <p><strong>Objective:</strong> Create a Windows 11 virtual machine and join it to the internal lab domain <code>lab.local</code> to test user logins and Group Policy behavior.</p>
   <ul>
     <li>Created a Hyper-V VM named <code>Client01</code></li>
@@ -144,7 +167,7 @@
 
 <!-- STEP 6 -->
 <section id="step6" class="section">
-  <h2>📡 Step 6: Configure DHCP Server</h2>
+  <h2>Step 6: Configure DHCP Server</h2>
   <p><strong>Objective:</strong> Install and configure the DHCP Server role on <code>DC01</code> to dynamically assign IP addresses to network clients.</p>
   <ul>
     <li>Installed DHCP Server role via Server Manager</li>
@@ -169,7 +192,7 @@
 
   <!-- STEP 7 -->
   <section id="step7" class="section">
-    <h2>📦 Step 7: Configure WSUS Server</h2>
+    <h2>Step 7: Configure WSUS Server</h2>
     <p><strong>Objective:</strong> Install and configure Windows Server Update Services (WSUS) on <code>DC01</code> to centrally manage Windows updates.</p>
     <ul>
       <li>Installed WSUS role and required features</li>
@@ -186,7 +209,7 @@
 
   <!-- STEP 8 -->
   <section id="step8" class="section">
-    <h2>📄 Step 8: Apply WSUS Group Policy</h2>
+    <h2>Step 8: Apply WSUS Group Policy</h2>
     <p><strong>Objective:</strong> Create and apply a GPO that redirects lab clients to the internal WSUS server for updates.</p>
     <ul>
       <li>Created GPO: <code>WSUS_Lab_Clients</code></li>
@@ -204,7 +227,7 @@
 
   <!-- STEP 9 -->
   <section id="step9" class="section">
-    <h2>📂 Step 9: Configure File Services</h2>
+    <h2>Step 9: Configure File Services</h2>
     <p><strong>Objective:</strong> Set up a shared folder accessible by all domain users and verify access from Client01.</p>
     <ul>
       <li>Verified File Server role was installed</li>
@@ -224,7 +247,7 @@
 
   <!-- STEP 10 -->
   <section id="step10" class="section">
-    <h2>📟 Step 10: Final Lab Overview</h2>
+    <h2>Step 10: Final Lab Overview</h2>
     <p><strong>Objective:</strong> Verify core services and document system status after all configurations are complete.</p>
     <ul>
       <li>Confirmed AD OU structure and user accounts</li>
@@ -241,6 +264,124 @@
       <a href="../images/projects/homelab-project/step10-servermanager-summary.png" target="_blank"><img src="../images/projects/homelab-project/step10-servermanager-summary.png" alt="Server Roles Overview" class="content-image"></a>
     </div>
   </section>
+
+
+<!-- STEP 11 -->
+<section id="step11" class="section">
+  <h2>Step 11: Drive Mapping via Group Policy</h2>
+  <p><strong>Objective:</strong> Automatically assign department-specific network drives using GPO item-level targeting.</p>
+  <ul>
+    <li>Created <code>\\DC01\HRShare</code> and <code>\\DC01\ITShare</code> folders</li>
+    <li>Set NTFS and share permissions for HRStaff and ITAdmins groups</li>
+    <li>Created and linked GPOs to HR and IT OUs</li>
+    <li>Used Group Policy Preferences to map H: and I: drives based on group membership</li>
+    <li>Verified drive mapping by logging into Client01 as Alice</li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step11-folder-share.png" target="_blank"><img src="../images/projects/homelab-project/step11-folder-share.png" alt="Shared folder HRShare and ITShare" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step11-hrshare-ntfs.png" target="_blank"><img src="../images/projects/homelab-project/step11-hrshare-ntfs.png" alt="NTFS permissions for HRShare" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step11-alice-group.png" target="_blank"><img src="../images/projects/homelab-project/step11-alice-group.png" alt="Alice in HRStaff group" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step11-gpo-drive-map-hr.png" target="_blank"><img src="../images/projects/homelab-project/step11-gpo-drive-map-hr.png" alt="GPO drive mapping configuration" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step11-gpo-targeting-hr.png" target="_blank"><img src="../images/projects/homelab-project/step11-gpo-targeting-hr.png" alt="Item-level targeting for HRStaff" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step11-client01-hr-drive.png" target="_blank"><img src="../images/projects/homelab-project/step11-client01-hr-drive.png" alt="Client01 showing mapped H: drive" class="content-image"></a>
+  </div>
+</section>
+
+<!-- STEP 12 -->
+<section id="step12" class="section">
+  <h2>Step 12: Redirect Documents Folder</h2>
+  <p><strong>Objective:</strong> Redirect Documents folder for HR users to a network location for centralized storage.</p>
+  <ul>
+    <li>Created <code>\\DC01\UserFolders</code> and set NTFS permissions</li>
+    <li>Created GPO <code>HR_Documents_Redirect</code></li>
+    <li>Configured folder redirection for Documents to <code>\\DC01\UserFolders\%USERNAME%\Documents</code></li>
+    <li>Linked GPO to HR OU and verified with Client01 login</li>
+  </ul>
+  <div class="screenshot-grid">
+          <a href="../images/projects/homelab-project/step12-userfolders-ntfs.png" target="_blank"><img src="../images/projects/homelab-project/step12-userfolders-ntfs.png" alt="NTFS permissions for UserFolders" class="content-image"></a>
+          <a href="../images/projects/homelab-project/step12-create-gpo.png" target="_blank"><img src="../images/projects/homelab-project/step12-create-gpo.png" alt="GPO created for Documents redirection" class="content-image"></a>
+          <a href="../images/projects/homelab-project/step12-gpo-documents.png" target="_blank"><img src="../images/projects/homelab-project/step12-gpo-documents.png" alt="Target folder path in GPO" class="content-image"></a>
+          <a href="../images/projects/homelab-project/step12-userfolders-share.png" target="_blank"><img src="../images/projects/homelab-project/step12-userfolders-share.png" alt="Share permissions for UserFolders" class="content-image"></a>
+          <a href="../images/projects/homelab-project/step12-client01-documents-location.png" target="_blank"><img src="../images/projects/homelab-project/step12-client01-documents-location.png" alt="Client01 showing redirected Documents folder" class="content-image"></a>
+        </div>
+</section>
+
+<!-- STEP 13 -->
+<section id="step13" class="section">
+  <h2>Step 13: Welcome Logon Script</h2>
+  <p><strong>Objective:</strong> Display a welcome message and create user-specific folders during logon.</p>
+  <ul>
+    <li>Created PowerShell script <code>welcome-logon-script.ps1</code></li>
+    <li>Saved script to <code>\\DC01\SYSVOL\lab.local\Scripts</code></li>
+    <li>Configured GPO to run script at user logon</li>
+    <li>Tested successful execution on Alice login</li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step13-sysvol.png" target="_blank"><img src="../images/projects/homelab-project/step13-sysvol.png" alt="Script saved in SYSVOL" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step13-gpo-logon-settings.png" target="_blank"><img src="../images/projects/homelab-project/step13-gpo-logon-settings.png" alt="Logon script settings in GPO" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step13-client01-welcome-folder.png" target="_blank"><img src="../images/projects/homelab-project/step13-client01-welcome-folder.png" alt="Client01 showing script-created folder" class="content-image"></a>
+  </div>
+</section>
+
+<!-- STEP 14 -->
+<section id="step14" class="section">
+  <h2>Step 14: AD Audit Script</h2>
+  <p><strong>Objective:</strong> Export user and group membership information from Active Directory using PowerShell.</p>
+  <ul>
+    <li>Wrote <code>export-ad-user-groups.ps1</code> to pull user/group data</li>
+    <li>Script saves output as timestamped CSV</li>
+    <li>Executed script on DC01 with execution policy bypass</li>
+    <li>Used output for documentation and reporting</li>
+  </ul>
+  <div class="screenshot-grid">
+          <a href="../images/projects/homelab-project/step14-export-users-csv-output.png" target="_blank"><img src="../images/projects/homelab-project/step14-export-users-csv-output.png" alt="PowerShell output confirming successful audit" class="content-image"></a>
+          <a href="../images/projects/homelab-project/step14-csv-preview.png" target="_blank"><img src="../images/projects/homelab-project/step14-csv-preview.png" alt="CSV audit preview in Notepad" class="content-image"></a>
+    </div>
+</section>
+
+<!-- STEP 15 -->
+<section id="step15" class="section">
+  <h2>Step 15: Offboarding Script</h2>
+  <p><strong>Objective:</strong> Use PowerShell to simulate offboarding a user account from the domain.</p>
+  <ul>
+    <li>Created <code>offboard-user.ps1</code></li>
+    <li>Disables the user account and removes group membership</li>
+    <li>Moves user to OffboardedUsers OU and logs the actions to a timestamped file</li>
+    <li>Tested with user <code>test.user</code></li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step15-ou-offboardedusers.png" target="_blank"><img src="../images/projects/homelab-project/step15-ou-offboardedusers.png" alt="Created OffboardedUsers OU" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step15-script-sysvol.png" target="_blank"><img src="../images/projects/homelab-project/step15-script-sysvol.png" alt="Script saved to SYSVOL" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step15-script-output.png" target="_blank"><img src="../images/projects/homelab-project/step15-script-output.png" alt="Script output showing log entries" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step15-user-disabled.png" target="_blank"><img src="../images/projects/homelab-project/step15-user-disabled.png" alt="User disabled and moved to OffboardedUsers" class="content-image"></a>
+  </div>
+</section>
+
+<!-- ROADMAP SECTION -->
+      <section id="roadmap" class="section">
+        <h2>Steps 16–20: Coming Soon</h2>
+        <p>This final phase will complete the full homelab tutorial. Here's what’s planned:</p>
+        <ol>
+          <li><strong>Step 16:</strong> Domain Logon Failure Tracking — configure auditing policies and custom script logging for failed login attempts (initial attempts ran into issues with policy propagation and log format consistency)</li>
+          <li><strong>Step 17:</strong> Bulk User Creation — use a CSV-driven PowerShell script to generate multiple accounts and assign roles/groups</li>
+          <li><strong>Step 18:</strong> Helpdesk Simulation — set up limited-access support account with delegated rights and test a simple ticket workflow</li>
+          <li><strong>Step 19:</strong> Remote Work Policy — create a GPO for VPN users with modified firewall and drive access rules</li>
+          <li><strong>Step 20:</strong> Project Cleanup & Export — export system state, final OU layout, scripts used, and notes for future deployment or presentation</li>
+        </ol>
+        <p><em>These tasks are in progress and will be added as documentation is finalized.</em></p>
+      </section>
+
+<!-- DOWNLOAD SECTION -->
+      <section id="downloads" class="section">
+        <h2>Script Downloads</h2>
+        <p>All PowerShell scripts used in this project are organized by step and available in the GitHub repo:</p>
+        <ul>
+          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step11" target="_blank">Step 11 – Drive Mapping</a></li>
+          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2013" target="_blank">Step 13 – Logon Script</a></li>
+          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2014" target="_blank">Step 14 – AD Audit</a></li>
+          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2015" target="_blank">Step 15 – Offboarding</a></li>
+        </ul>
+      </section>
 
   <footer class="footer">
     <p><a href="../index.html">← Back to Main Site</a></p>
