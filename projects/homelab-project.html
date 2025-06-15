@@ -357,19 +357,128 @@
   </div>
 </section>
 
-<!-- ROADMAP SECTION -->
-      <section id="roadmap" class="section">
-        <h2>Steps 16–20: Coming Soon</h2>
-        <p>This final phase will complete the full homelab tutorial. Here's what’s planned:</p>
-        <ol>
-          <li><strong>Step 16:</strong> Domain Logon Failure Tracking — configure auditing policies and custom script logging for failed login attempts (initial attempts ran into issues with policy propagation and log format consistency)</li>
-          <li><strong>Step 17:</strong> Bulk User Creation — use a CSV-driven PowerShell script to generate multiple accounts and assign roles/groups</li>
-          <li><strong>Step 18:</strong> Helpdesk Simulation — set up limited-access support account with delegated rights and test a simple ticket workflow</li>
-          <li><strong>Step 19:</strong> Remote Work Policy — create a GPO for VPN users with modified firewall and drive access rules</li>
-          <li><strong>Step 20:</strong> Project Cleanup & Export — export system state, final OU layout, scripts used, and notes for future deployment or presentation</li>
-        </ol>
-        <p><em>These tasks are in progress and will be added as documentation is finalized.</em></p>
-      </section>
+<!-- STEP 16 -->
+<section id="step16" class="section">
+  <h2>Step 16: Failed Logon Tracking</h2>
+  <p><strong>Objective:</strong> Capture and review failed domain login attempts (Event ID 4625) to demonstrate log auditing practices.</p>
+  <ul>
+    <li>Enabled auditing for failed logon events via Group Policy</li>
+    <li>Attempted centralized Event Log Forwarding to DC01 (setup completed but never received logs)</li>
+    <li>Fallback: Configured Event Viewer locally on <code>Client01</code> to directly capture 4625 entries</li>
+    <li>Tested login failures by entering incorrect credentials for <code>alice.hr</code></li>
+    <li>Captured relevant metadata from 4625 logs including target username, domain, failure reason, and timestamp</li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step16-client01-eventviewer-4625.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-eventviewer-4625.png" alt="Client01 Event Viewer showing filtered 4625 logs" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step16-client01-4625-log-entry.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-log-entry.png" alt="4625 audit failure entry in Security log" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step16-client01-4625-details-tab1.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-details-tab1.png" alt="EventData tab showing SubjectUserName" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step16-client01-4625-details-tab2.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-details-tab2.png" alt="TargetUserName and error codes" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step16-client01-4625-logon-failed.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-logon-failed.png" alt="Failure reason: unknown user or bad password" class="content-image"></a>
+  </div>
+</section>
+
+<!-- STEP 17 -->
+<section id="step17" class="section">
+  <h2>Step 17: Bulk User Creation from CSV</h2>
+  <p><strong>Objective:</strong> Create multiple AD users across different OUs using a centralized PowerShell script and CSV file.</p>
+  <ul>
+    <li>Created <code>create-bulk-users.ps1</code> to read users from CSV and generate accounts</li>
+    <li>CSV includes fields: FirstName, LastName, Username, OU, Password</li>
+    <li>Script iterates through rows, builds OU path, and runs <code>New-ADUser</code> for each entry</li>
+    <li>CSV and script stored in <code>\\DC01\SYSVOL\lab.local\scripts\</code></li>
+    <li>Executed script with policy bypass on DC01</li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step17-csv-preview.png" target="_blank"><img src="../images/projects/homelab-project/step17-csv-preview.png" alt="CSV preview showing user data" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step17-script-sysvol.png" target="_blank"><img src="../images/projects/homelab-project/step17-script-sysvol.png" alt="Script stored in SYSVOL share" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step17-powershell-success.png" target="_blank"><img src="../images/projects/homelab-project/step17-powershell-success.png" alt="PowerShell output confirming users created" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step17-ou-confirmation.png" target="_blank"><img src="../images/projects/homelab-project/step17-ou-confirmation.png" alt="ADUC showing users created in correct OUs" class="content-image"></a>
+  </div>
+</section>
+
+<!-- STEP 18 -->
+<section id="step18" class="section">
+  <h2>Step 18: Helpdesk Simulation</h2>
+  <p><strong>Objective:</strong> Simulate a helpdesk scenario by creating a limited-access user account, delegating password reset rights, and testing the functionality.</p>
+  <ul>
+    <li>Created a user account <code>helpdesk1</code> in the <code>UserAccounts</code> OU</li>
+    <li>Delegated reset password rights for the <code>HR</code> OU using the Delegation of Control Wizard</li>
+    <li>Attempted to install RSAT tools on Client01 to allow GUI-based password reset—but installation failed repeatedly despite full troubleshooting</li>
+    <li>Successfully completed password reset task using PowerShell directly on DC01 as an alternate method</li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step18-helpdesk1-created.png" target="_blank">
+      <img src="../images/projects/homelab-project/step18-helpdesk1-created.png" alt="Helpdesk1 user account created" class="content-image">
+    </a>
+    <a href="../images/projects/homelab-project/step18-delegate-helpdesk-user.png" target="_blank">
+      <img src="../images/projects/homelab-project/step18-delegate-helpdesk-user.png" alt="Delegation wizard with helpdesk1 selected" class="content-image">
+    </a>
+    <a href="../images/projects/homelab-project/step18-delegate-reset-password.png" target="_blank">
+      <img src="../images/projects/homelab-project/step18-delegate-reset-password.png" alt="Reset password rights delegated" class="content-image">
+    </a>
+    <a href="../images/projects/homelab-project/step18-rsat-install-fail.png" target="_blank">
+      <img src="../images/projects/homelab-project/step18-rsat-install-fail.png" alt="RSAT install failed on Client01" class="content-image">
+    </a>
+    <a href="../images/projects/homelab-project/step18-password-reset-via-powershell.png" target="_blank">
+      <img src="../images/projects/homelab-project/step18-password-reset-via-powershell.png" alt="Password reset via PowerShell on DC01" class="content-image">
+    </a>
+  </div>
+</section>
+
+<!-- STEP 19 -->
+<section id="step19" class="section">
+  <h2>Step 19: Remote Work Group Policy</h2>
+  <p><strong>Objective:</strong> Create and test a Group Policy Object for remote workers that enables Remote Desktop and maps a network drive to a shared folder.</p>
+  <ul>
+    <li>Created <code>RemoteUsers</code> OU in Active Directory and added a test account <code>remote.user</code></li>
+    <li>Created GPO <code>Remote_Work_Policy</code> and linked it to the <code>RemoteUsers</code> OU</li>
+    <li>Enabled <strong>Allow users to connect remotely using Remote Desktop Services</strong></li>
+    <li>Mapped Z: drive to <code>\\DC01\SharedFiles</code> via GPO preferences</li>
+    <li>Logged in to Client01 as <code>remote.user</code> and verified drive mapping and policy application</li>
+  </ul>
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step19-remote-ou.png" target="_blank"><img src="../images/projects/homelab-project/step19-remote-ou.png" alt="RemoteUsers OU created via PowerShell" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-remote-user-created.png" target="_blank"><img src="../images/projects/homelab-project/step19-remote-user-created.png" alt="remote.user created via PowerShell" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-gpo-linked-remote.png" target="_blank"><img src="../images/projects/homelab-project/step19-gpo-linked-remote.png" alt="GPO linked to RemoteUsers OU" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-gpo-remote-rdp.png" target="_blank"><img src="../images/projects/homelab-project/step19-gpo-remote-rdp.png" alt="Enable RDP policy setting in GPO" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-drive-map-z.png" target="_blank"><img src="../images/projects/homelab-project/step19-drive-map-z.png" alt="Drive mapping Z: to \\DC01\SharedFiles" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-client01-login-remote-user.png" target="_blank"><img src="../images/projects/homelab-project/step19-client01-login-remote-user.png" alt="Logged in as remote.user on Client01" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-client01-z-drive.png" target="_blank"><img src="../images/projects/homelab-project/step19-client01-z-drive.png" alt="Z: drive mapped successfully" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step19-gpresult-remote-user.png" target="_blank"><img src="../images/projects/homelab-project/step19-gpresult-remote-user.png" alt="gpresult confirms GPO applied" class="content-image"></a>
+  </div>
+</section>
+
+<!-- STEP 20 -->
+<section id="step20" class="section">
+  <h2>Step 20: Final Project Export & Cleanup</h2>
+  <p><strong>Objective:</strong> Export all core homelab data including GPOs, users, OU structure, and key configuration snapshots for documentation, reusability, and versioning.</p>
+  <ul>
+    <li>Backed up all Group Policy Objects using:
+      <pre><code>Backup-GPO -All -Path "C:\GPO-Backup"</code></pre>
+    </li>
+    <li>Exported full AD user list with:
+      <pre><code>Get-ADUser -Filter * | Select Name, SamAccountName, DistinguishedName | Export-Csv -Path "C:\user-export.csv"</code></pre>
+    </li>
+    <li>Confirmed OU layout using:
+      <pre><code>Get-ADOrganizationalUnit -Filter * | Select Name, DistinguishedName</code></pre>
+    </li>
+    <li>Captured all custom PowerShell scripts from:
+      <code>\\DC01\SYSVOL\lab.local\scripts</code>
+    </li>
+    <li>Verified WSUS summary screen showing sync group and system status</li>
+    <li>Captured DHCP scope range and pool configuration</li>
+  </ul>
+
+  <div class="screenshot-grid">
+    <a href="../images/projects/homelab-project/step20-final-ou.png" target="_blank"><img src="../images/projects/homelab-project/step20-final-ou.png" alt="OU structure export output" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step20-gpo-backup-output.png" target="_blank"><img src="../images/projects/homelab-project/step20-gpo-backup-output.png" alt="GPO Backup Output" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step20-scripts-folder.png" target="_blank"><img src="../images/projects/homelab-project/step20-scripts-folder.png" alt="Scripts folder in SYSVOL" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step20-user-export-output.png" target="_blank"><img src="../images/projects/homelab-project/step20-user-export-output.png" alt="Exported AD user list" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step20-wsus-summary.png" target="_blank"><img src="../images/projects/homelab-project/step20-wsus-summary.png" alt="WSUS computer group summary" class="content-image"></a>
+    <a href="../images/projects/homelab-project/step20-dhcp-scope.png" target="_blank"><img src="../images/projects/homelab-project/step20-dhcp-scope.png" alt="DHCP scope configuration" class="content-image"></a>
+  </div>
+  <p>This step completes the homelab. All system data, scripts, user objects, GPOs, and server roles have been documented and exported for archival or reuse in future labs.</p>
+</section>
 
 <!-- DOWNLOAD SECTION -->
       <section id="downloads" class="section">
@@ -380,6 +489,7 @@
           <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2013" target="_blank">Step 13 – Logon Script</a></li>
           <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2014" target="_blank">Step 14 – AD Audit</a></li>
           <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2015" target="_blank">Step 15 – Offboarding</a></li>
+          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step17" target="_blank">Step 17 – Bulk User Creation</a></li>
         </ul>
       </section>
 
