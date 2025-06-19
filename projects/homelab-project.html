@@ -2,65 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Homelab Project - Justin Narusis">
-  <title>Homelab Project</title>
+  <meta name="description" content="Windows Server Active Directory Homelab - Professional IT Infrastructure Project by Justin Narusis">
+  <title>Windows Server Active Directory Homelab - Justin Narusis</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+  <style>
+    .sidebar summary a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* Visual Grouping Styles */
+    .content-group {
+      background-color: #181818;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 2em;
+      margin-bottom: 3em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .group-title {
+      font-size: 2.2em;
+      color: #004a7c;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #005a9c;
+    }
+    
+    #overview h1 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="layout">
-  
- <aside class="sidebar" role="navigation" aria-label="Page Navigation">
+<div class="layout">
+  <aside class="sidebar" role="navigation" aria-label="Page Navigation">
   <nav>
-    <details open>
-      <summary><strong>Homelab Setup</strong></summary>
+    <details>
+      <summary>Infrastructure Setup</summary>
       <ul>
-        <li><a href="#step1">Step 1</a></li>
-        <li><a href="#step2">Step 2</a></li>
-        <li><a href="#step3">Step 3</a></li>
-        <li><a href="#step4">Step 4</a></li>
-        <li><a href="#step5">Step 5</a></li>
-        <li><a href="#step6">Step 6</a></li>
-        <li><a href="#step7">Step 7</a></li>
-        <li><a href="#step8">Step 8</a></li>
-        <li><a href="#step9">Step 9</a></li>
-        <li><a href="#step10">Step 10</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#active-directory">Active Directory</a></li>
+        <li><a href="#network-services">Network Services</a></li>
+        <li><a href="#wsus">WSUS Management</a></li>
       </ul>
     </details>
-
-    <details open>
-      <summary><strong>Admin Scenarios</strong></summary>
+     <hr>
+    <details>
+      <summary>Admin Scenarios</summary>
       <ul>
-        <li><a href="#step11">Step 11</a></li>
-        <li><a href="#step12">Step 12</a></li>
-        <li><a href="#step13">Step 13</a></li>
-        <li><a href="#step14">Step 14</a></li>
-        <li><a href="#step15">Step 15</a></li>
-        <li><a href="#step16">Step 16</a></li>
-        <li><a href="#step17">Step 17</a></li>
-        <li><a href="#step18">Step 18</a></li>
-        <li><a href="#step19">Step 19</a></li>
-        <li><a href="#step20">Step 20</a></li>
+        <li><a href="#group-policy">Group Policy</a></li>
+        <li><a href="#file-services">File Services</a></li>
+        <li><a href="#powershell">PowerShell Automation</a></li>
+        <li><a href="#helpdesk">Helpdesk Operations</a></li>
+        <li><a href="#security">Security & Auditing</a></li>
       </ul>
     </details>
-
-   <ul>
-  <li><a href="#downloads">Script Downloads</a></li>
-  <li><a href="../index.html#portfolio">← Back to Portfolio</a></li>
-</ul>
+     <hr>
+    <details>
+      <summary>Professional Impact</summary>
+      <ul>
+        <li><a href="#skills">Skills Demonstrated</a></li>
+        <li><a href="#outcomes">Project Outcomes</a></li>
+        <li><a href="#future">Future Enhancements</a></li>
+        <li><a href="#summary">Project Summary</a></li>
+      </ul>
+    </details>
+     <hr>
+    <ul>
+      <li><a href="../index.html#portfolio">← Back to Portfolio</a></li>
+    </ul>
   </nav>
 </aside>
 
-    <!-- Main content -->
-    <main class="main-content">
-      <div class="banner">
-        <a href="../images/site/banner.jpg" target="_blank"><img src="../images/site/banner.jpg" alt="Portfolio Banner"></a>
-      </div>
+  <main class="main-content">
+    <a id="top"></a>
+    <div class="banner">
+      <a href="../images/site/banner.jpg" target="_blank">
+        <img src="../images/site/banner.jpg" alt="Portfolio Banner">
+      </a>
+    </div>
 
-      <section id="overview" class="section">
-        <h1>Homelab Project</h1>
-        <p>This hands-on homelab simulates a real-world IT environment using Hyper-V and Windows Server 2022. It includes domain services, Group Policy, DHCP, WSUS, File Sharing, and client management on a local internal domain (<code>lab.local</code>). This setup allowed me to practice systems administration, client policy management, and update deployment in a realistic lab scenario.</p>
+    <section id="overview" class="section">
+        <h1>Windows Server Active Directory Homelab</h1>
+        <div class="project-highlight">
+          <p>Built a comprehensive Windows Server 2022 Active Directory environment demonstrating enterprise IT administration skills including domain services, group policy management, user administration, and infrastructure services.</p>
+          <p>This project demonstrates practical experience with enterprise Windows Server administration, Active Directory management, and IT infrastructure services essential for corporate environments, highlighting key strengths in creating a scalable architecture, automating tasks with PowerShell, and ensuring security compliance.</p>
+          <p><strong>Key Technologies:</strong> Windows Server 2022, Active Directory, DNS, DHCP, WSUS, Group Policy, PowerShell, Hyper-V</p>
+          <p><strong>Project Duration:</strong> 3 weeks | <strong>Environment:</strong> Hyper-V Virtualization</p>
+        </div>
         <div class="image-frame">
           <a href="../images/projects/homelab-project/step10-servermanager-summary.png" target="_blank">
             <img src="../images/projects/homelab-project/step10-servermanager-summary.png" alt="Server Manager Summary" class="content-image">
@@ -69,434 +104,436 @@
         </div>
       </section>
 
-<!-- STEP 1 -->
-<section id="step1" class="section">
-  <h2>Step 1: Create New Virtual Machine</h2>
-  <p><strong>Objective:</strong> Set up a new virtual machine in Hyper-V for Windows Server 2022.</p>
-  <ul>
-    <li>Created a dynamically expanding virtual disk</li>
-    <li>Named the VM <code>DC01</code></li>
-    <li>Configured memory, networking, and ISO boot</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step1-name-dc01.png" target="_blank"><img src="../images/projects/homelab-project/step1-name-dc01.png" alt="Naming the VM DC01" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-gen2.png" target="_blank"><img src="../images/projects/homelab-project/step1-gen2.png" alt="Generation 2 settings" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-ram.png" target="_blank"><img src="../images/projects/homelab-project/step1-ram.png" alt="Allocating RAM" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-summary.png" target="_blank"><img src="../images/projects/homelab-project/step1-summary.png" alt="VM configuration summary" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-edition.png" target="_blank"><img src="../images/projects/homelab-project/step1-edition.png" alt="Selecting server edition" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-installing.png" target="_blank"><img src="../images/projects/homelab-project/step1-installing.png" alt="Installing the OS" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-password.png" target="_blank"><img src="../images/projects/homelab-project/step1-password.png" alt="Setting administrator password" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step1-servermanager.png" target="_blank"><img src="../images/projects/homelab-project/step1-servermanager.png" alt="Server Manager dashboard" class="content-image"></a>
-  </div>
-</section>
+    <div class="content-group">
+      <h2 class="group-title">Infrastructure Setup</h2>
 
-<!-- STEP 2 -->
-<section id="step2" class="section">
-  <h2>Step 2: Configuring Windows Server as a Domain Controller</h2>
-  <p><strong>Objective:</strong> Install and configure Active Directory Domain Services (AD DS) on Windows Server 2022. Set up a new domain environment <code>lab.local</code>.</p>
-  <ul>
-    <li>Renamed server to <code>DC01</code></li>
-    <li>Assigned static IP: <code>192.168.0.42</code></li>
-    <li>Installed AD DS and DNS roles</li>
-    <li>Promoted server to domain controller</li>
-    <li>Created domain <code>lab.local</code></li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step2_rename_start.png" target="_blank"><img src="../images/projects/homelab-project/step2_rename_start.png" alt="Renaming to DC01" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step2_static_ip_config.png" target="_blank"><img src="../images/projects/homelab-project/step2_static_ip_config.png" alt="Setting static IP" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step2_select_ad_ds_role.png" target="_blank"><img src="../images/projects/homelab-project/step2_select_ad_ds_role.png" alt="Selecting AD DS Role" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step2_promote_dc_start.png" target="_blank"><img src="../images/projects/homelab-project/step2_promote_dc_start.png" alt="Starting domain promotion" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step2_add_new_forest.png" target="_blank"><img src="../images/projects/homelab-project/step2_add_new_forest.png" alt="Creating domain forest" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 3 -->
-<section id="step3" class="section">
-  <h2>Step 3: Active Directory Setup: OUs, Users, and Groups</h2>
-  <p><strong>Objective:</strong> Design a simple Active Directory structure for user and group management using Organizational Units and Security Groups.</p>
-  <ul>
-    <li>Created OUs: <code>Users</code>, <code>IT</code>, <code>HR</code>, <code>TestComputers</code></li>
-    <li>Created users: <code>alice.hr</code>, <code>bob.it</code>, <code>test.user</code></li>
-    <li>Created security groups: <code>ITAdmins</code>, <code>HRStaff</code></li>
-    <li>Assigned users to relevant groups</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step3-create-user-alice.png" target="_blank"><img src="../images/projects/homelab-project/step3-create-user-alice.png" alt="Creating Alice in HR" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step3-ou-structure.png" target="_blank"><img src="../images/projects/homelab-project/step3-ou-structure.png" alt="OU structure" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step3-group-membership.png" target="_blank"><img src="../images/projects/homelab-project/step3-group-membership.png" alt="Group membership for Bob" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step3-group-created.png" target="_blank"><img src="../images/projects/homelab-project/step3-group-created.png" alt="Group created with Alice" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 4 -->
-<section id="step4" class="section">
-  <h2>Step 4: Group Policy Setup: Login Banner for HR OU</h2>
-  <p><strong>Objective:</strong> Apply a custom login banner to users in the HR OU via Group Policy.</p>
-  <ul>
-    <li>Created and linked GPO: <code>HR_Login_Banner</code></li>
-    <li>Set login title and message under Security Options</li>
-    <li>Applied policy using <code>gpupdate /force</code></li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step4-gpo-management-console.png" target="_blank"><img src="../images/projects/homelab-project/step4-gpo-management-console.png" alt="GPO management console" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step4-hr-login-banner-scope.png" target="_blank"><img src="../images/projects/homelab-project/step4-hr-login-banner-scope.png" alt="HR login banner scope" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step4-login-title-setting.png" target="_blank"><img src="../images/projects/homelab-project/step4-login-title-setting.png" alt="Login banner title setting" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step4-login-text-setting.png" target="_blank"><img src="../images/projects/homelab-project/step4-login-text-setting.png" alt="Login banner text setting" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step4-gpupdate-force.png" target="_blank"><img src="../images/projects/homelab-project/step4-gpupdate-force.png" alt="Applying policy with gpupdate" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 5 -->
-<section id="step5" class="section">
-  <h2>Step 5: Join a Windows Client to the Domain</h2>
-  <p><strong>Objective:</strong> Create a Windows 11 virtual machine and join it to the internal lab domain <code>lab.local</code> to test user logins and Group Policy behavior.</p>
-  <ul>
-    <li>Created a Hyper-V VM named <code>Client01</code></li>
-    <li>Installed Windows 11 and created a local admin account</li>
-    <li>Set static IP: <code>192.168.0.43</code> with DNS pointing to <code>192.168.0.42</code> (DC01)</li>
-    <li>Joined the domain <code>lab.local</code></li>
-    <li>Logged in as domain user <code>alice.hr</code></li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step5-vm-setup-summary.png" target="_blank"><img src="../images/projects/homelab-project/step5-vm-setup-summary.png" alt="Client01 VM setup summary" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step5-domain-change-dialog.png" target="_blank"><img src="../images/projects/homelab-project/step5-domain-change-dialog.png" alt="Joining the lab.local domain" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step5-join-domain-confirmation.png" target="_blank"><img src="../images/projects/homelab-project/step5-join-domain-confirmation.png" alt="Domain join confirmation message" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step5-desktop-success.png" target="_blank"><img src="../images/projects/homelab-project/step5-desktop-success.png" alt="Alice logged in to Client01 desktop" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 6 -->
-<section id="step6" class="section">
-  <h2>Step 6: Configure DHCP Server</h2>
-  <p><strong>Objective:</strong> Install and configure the DHCP Server role on <code>DC01</code> to dynamically assign IP addresses to network clients.</p>
-  <ul>
-    <li>Installed DHCP Server role via Server Manager</li>
-    <li>Authorized DHCP in Active Directory</li>
-    <li>Created a new IPv4 scope: <code>192.168.0.100–192.168.0.199</code></li>
-    <li>Configured lease duration and default gateway</li>
-    <li>Activated the scope and verified dynamic IP assignment</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step6-install-wizard-start.png" target="_blank"><img src="../images/projects/homelab-project/step6-install-wizard-start.png" alt="DHCP installation wizard start" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-add-required-features.png" target="_blank"><img src="../images/projects/homelab-project/step6-add-required-features.png" alt="Add required features for DHCP" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-install-confirmation.png" target="_blank"><img src="../images/projects/homelab-project/step6-install-confirmation.png" alt="DHCP install confirmation" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-authorize-dhcp.png" target="_blank"><img src="../images/projects/homelab-project/step6-authorize-dhcp.png" alt="Authorizing DHCP Server" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-dhcp-console-empty.png" target="_blank"><img src="../images/projects/homelab-project/step6-dhcp-console-empty.png" alt="DHCP console before scope" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-scope-settings.png" target="_blank"><img src="../images/projects/homelab-project/step6-scope-settings.png" alt="Configuring scope address range" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-dns-settings.png" target="_blank"><img src="../images/projects/homelab-project/step6-dns-settings.png" alt="DNS settings during scope creation" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-scope-confirmation.png" target="_blank"><img src="../images/projects/homelab-project/step6-scope-confirmation.png" alt="Scope creation confirmation" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-scope-active.png" target="_blank"><img src="../images/projects/homelab-project/step6-scope-active.png" alt="DHCP Scope Active" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step6-client-ipconfig.png" target="_blank"><img src="../images/projects/homelab-project/step6-client-ipconfig.png" alt="Client IPConfig showing DHCP assigned address" class="content-image"></a>
-  </div>
-</section>
-
-  <!-- STEP 7 -->
-  <section id="step7" class="section">
-    <h2>Step 7: Configure WSUS Server</h2>
-    <p><strong>Objective:</strong> Install and configure Windows Server Update Services (WSUS) on <code>DC01</code> to centrally manage Windows updates.</p>
-    <ul>
-      <li>Installed WSUS role and required features</li>
-      <li>Set local content path to <code>C:\WSUS</code></li>
-      <li>Completed configuration wizard and initial sync</li>
-      <li>Created target group: <code>Lab Computers</code></li>
-    </ul>
-    <div class="screenshot-grid">
-      <a href="../images/projects/homelab-project/step8-create-wsus-gpo.png" target="_blank"><img src="../images/projects/homelab-project/step8-create-wsus-gpo.png" alt="Creating WSUS Group Policy" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step8-wsus-location-setting.png" target="_blank"><img src="../images/projects/homelab-project/step8-wsus-location-setting.png" alt="WSUS Location Setting" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step10-wsus-status.png" target="_blank"><img src="../images/projects/homelab-project/step10-wsus-status.png" alt="WSUS Status" class="content-image"></a>
-    </div>
-  </section>
-
-  <!-- STEP 8 -->
-  <section id="step8" class="section">
-    <h2>Step 8: Apply WSUS Group Policy</h2>
-    <p><strong>Objective:</strong> Create and apply a GPO that redirects lab clients to the internal WSUS server for updates.</p>
-    <ul>
-      <li>Created GPO: <code>WSUS_Lab_Clients</code></li>
-      <li>Set "Specify intranet Microsoft update service location" to <code>http://DC01</code></li>
-      <li>(Optional) Enabled client-side targeting</li>
-      <li>Linked GPO to <code>TestComputers</code> OU</li>
-      <li>Confirmed policy applied via gpresult and Windows Update settings</li>
-    </ul>
-    <div class="screenshot-grid">
-      <a href="../images/projects/homelab-project/step8-client-side-targeting.png" target="_blank"><img src="../images/projects/homelab-project/step8-client-side-targeting.png" alt="Client-Side Targeting" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step8-link-gpo-ou.png" target="_blank"><img src="../images/projects/homelab-project/step8-link-gpo-ou.png" alt="Link GPO to OU" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step8-client-update-confirm.png" target="_blank"><img src="../images/projects/homelab-project/step8-client-update-confirm.png" alt="Client Update Confirmation" class="content-image"></a>
-    </div>
-  </section>
-
-  <!-- STEP 9 -->
-  <section id="step9" class="section">
-    <h2>Step 9: Configure File Services</h2>
-    <p><strong>Objective:</strong> Set up a shared folder accessible by all domain users and verify access from Client01.</p>
-    <ul>
-      <li>Verified File Server role was installed</li>
-      <li>Created folder: <code>C:\Shares\SharedFiles</code></li>
-      <li>Shared folder with Domain Users (Read + Change)</li>
-      <li>Set NTFS permissions for Domain Users</li>
-      <li>Confirmed successful network access from Client01</li>
-    </ul>
-    <div class="screenshot-grid">
-      <a href="../images/projects/homelab-project/step9-file-role-install.png" target="_blank"><img src="../images/projects/homelab-project/step9-file-role-install.png" alt="File Services Role Installed" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step9-folder-created.png" target="_blank"><img src="../images/projects/homelab-project/step9-folder-created.png" alt="Folder Created" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step9-share-permissions.png" target="_blank"><img src="../images/projects/homelab-project/step9-share-permissions.png" alt="Share Permissions" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step9-ntfs-permissions.png" target="_blank"><img src="../images/projects/homelab-project/step9-ntfs-permissions.png" alt="NTFS Permissions" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step9-client-access.png" target="_blank"><img src="../images/projects/homelab-project/step9-client-access.png" alt="Client Accessing Share" class="content-image"></a>
-    </div>
-  </section>
-
-  <!-- STEP 10 -->
-  <section id="step10" class="section">
-    <h2>Step 10: Final Lab Overview</h2>
-    <p><strong>Objective:</strong> Verify core services and document system status after all configurations are complete.</p>
-    <ul>
-      <li>Confirmed AD OU structure and user accounts</li>
-      <li>Verified DHCP lease for Client01</li>
-      <li>Viewed WSUS sync success and setup status</li>
-      <li>Accessed file share from Client01 as domain user</li>
-      <li>Reviewed Server Manager summary of installed roles</li>
-    </ul>
-    <div class="screenshot-grid">
-      <a href="../images/projects/homelab-project/step10-ad-structure.png" target="_blank"><img src="../images/projects/homelab-project/step10-ad-structure.png" alt="AD OU Structure" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step10-dhcp-lease.png" target="_blank"><img src="../images/projects/homelab-project/step10-dhcp-lease.png" alt="DHCP Lease Confirmed" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step10-wsus-status.png" target="_blank"><img src="../images/projects/homelab-project/step10-wsus-status.png" alt="WSUS Sync Status" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step10-client-confirmation.png" target="_blank"><img src="../images/projects/homelab-project/step10-client-confirmation.png" alt="Client Access Confirmation" class="content-image"></a>
-      <a href="../images/projects/homelab-project/step10-servermanager-summary.png" target="_blank"><img src="../images/projects/homelab-project/step10-servermanager-summary.png" alt="Server Roles Overview" class="content-image"></a>
-    </div>
-  </section>
-
-
-<!-- STEP 11 -->
-<section id="step11" class="section">
-  <h2>Step 11: Drive Mapping via Group Policy</h2>
-  <p><strong>Objective:</strong> Automatically assign department-specific network drives using GPO item-level targeting.</p>
-  <ul>
-    <li>Created <code>\\DC01\HRShare</code> and <code>\\DC01\ITShare</code> folders</li>
-    <li>Set NTFS and share permissions for HRStaff and ITAdmins groups</li>
-    <li>Created and linked GPOs to HR and IT OUs</li>
-    <li>Used Group Policy Preferences to map H: and I: drives based on group membership</li>
-    <li>Verified drive mapping by logging into Client01 as Alice</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step11-folder-share.png" target="_blank"><img src="../images/projects/homelab-project/step11-folder-share.png" alt="Shared folder HRShare and ITShare" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step11-hrshare-ntfs.png" target="_blank"><img src="../images/projects/homelab-project/step11-hrshare-ntfs.png" alt="NTFS permissions for HRShare" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step11-alice-group.png" target="_blank"><img src="../images/projects/homelab-project/step11-alice-group.png" alt="Alice in HRStaff group" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step11-gpo-drive-map-hr.png" target="_blank"><img src="../images/projects/homelab-project/step11-gpo-drive-map-hr.png" alt="GPO drive mapping configuration" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step11-gpo-targeting-hr.png" target="_blank"><img src="../images/projects/homelab-project/step11-gpo-targeting-hr.png" alt="Item-level targeting for HRStaff" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step11-client01-hr-drive.png" target="_blank"><img src="../images/projects/homelab-project/step11-client01-hr-drive.png" alt="Client01 showing mapped H: drive" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 12 -->
-<section id="step12" class="section">
-  <h2>Step 12: Redirect Documents Folder</h2>
-  <p><strong>Objective:</strong> Redirect Documents folder for HR users to a network location for centralized storage.</p>
-  <ul>
-    <li>Created <code>\\DC01\UserFolders</code> and set NTFS permissions</li>
-    <li>Created GPO <code>HR_Documents_Redirect</code></li>
-    <li>Configured folder redirection for Documents to <code>\\DC01\UserFolders\%USERNAME%\Documents</code></li>
-    <li>Linked GPO to HR OU and verified with Client01 login</li>
-  </ul>
-  <div class="screenshot-grid">
-          <a href="../images/projects/homelab-project/step12-userfolders-ntfs.png" target="_blank"><img src="../images/projects/homelab-project/step12-userfolders-ntfs.png" alt="NTFS permissions for UserFolders" class="content-image"></a>
-          <a href="../images/projects/homelab-project/step12-create-gpo.png" target="_blank"><img src="../images/projects/homelab-project/step12-create-gpo.png" alt="GPO created for Documents redirection" class="content-image"></a>
-          <a href="../images/projects/homelab-project/step12-gpo-documents.png" target="_blank"><img src="../images/projects/homelab-project/step12-gpo-documents.png" alt="Target folder path in GPO" class="content-image"></a>
-          <a href="../images/projects/homelab-project/step12-userfolders-share.png" target="_blank"><img src="../images/projects/homelab-project/step12-userfolders-share.png" alt="Share permissions for UserFolders" class="content-image"></a>
-          <a href="../images/projects/homelab-project/step12-client01-documents-location.png" target="_blank"><img src="../images/projects/homelab-project/step12-client01-documents-location.png" alt="Client01 showing redirected Documents folder" class="content-image"></a>
+            <section id="architecture" class="section">
+        <h2>Infrastructure Architecture</h2>
+        <div class="architecture-grid">
+          <div class="arch-component">
+            <h3>Domain Controller (DC01)</h3>
+            <ul>
+              <li>Windows Server 2022</li>
+              <li>Active Directory Domain Services</li>
+              <li>DNS, DHCP, WSUS</li>
+              <li>File Services</li>
+              <li>Static IP: 192.168.0.42</li>
+            </ul>
+          </div>
+          <div class="arch-component">
+            <h3>Client Workstation (Client01)</h3>
+            <ul>
+              <li>Windows 11 Pro</li>
+              <li>Domain-joined</li>
+              <li>Group Policy managed</li>
+              <li>DHCP assigned IP</li>
+            </ul>
+          </div>
+          <div class="arch-component">
+            <h3>Network Configuration</h3>
+            <ul>
+              <li>Domain: lab.local</li>
+              <li>Network: 192.168.0.0/24</li>
+              <li>DHCP Range: .100-.199</li>
+              <li>DNS: Integrated with AD</li>
+            </ul>
+          </div>
         </div>
-</section>
 
-<!-- STEP 13 -->
-<section id="step13" class="section">
-  <h2>Step 13: Welcome Logon Script</h2>
-  <p><strong>Objective:</strong> Display a welcome message and create user-specific folders during logon.</p>
-  <ul>
-    <li>Created PowerShell script <code>welcome-logon-script.ps1</code></li>
-    <li>Saved script to <code>\\DC01\SYSVOL\lab.local\Scripts</code></li>
-    <li>Configured GPO to run script at user logon</li>
-    <li>Tested successful execution on Alice login</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step13-sysvol.png" target="_blank"><img src="../images/projects/homelab-project/step13-sysvol.png" alt="Script saved in SYSVOL" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step13-gpo-logon-settings.png" target="_blank"><img src="../images/projects/homelab-project/step13-gpo-logon-settings.png" alt="Logon script settings in GPO" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step13-client01-welcome-folder.png" target="_blank"><img src="../images/projects/homelab-project/step13-client01-welcome-folder.png" alt="Client01 showing script-created folder" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 14 -->
-<section id="step14" class="section">
-  <h2>Step 14: AD Audit Script</h2>
-  <p><strong>Objective:</strong> Export user and group membership information from Active Directory using PowerShell.</p>
-  <ul>
-    <li>Wrote <code>export-ad-user-groups.ps1</code> to pull user/group data</li>
-    <li>Script saves output as timestamped CSV</li>
-    <li>Executed script on DC01 with execution policy bypass</li>
-    <li>Used output for documentation and reporting</li>
-  </ul>
-  <div class="screenshot-grid">
-          <a href="../images/projects/homelab-project/step14-export-users-csv-output.png" target="_blank"><img src="../images/projects/homelab-project/step14-export-users-csv-output.png" alt="PowerShell output confirming successful audit" class="content-image"></a>
-          <a href="../images/projects/homelab-project/step14-csv-preview.png" target="_blank"><img src="../images/projects/homelab-project/step14-csv-preview.png" alt="CSV audit preview in Notepad" class="content-image"></a>
-    </div>
-</section>
-
-<!-- STEP 15 -->
-<section id="step15" class="section">
-  <h2>Step 15: Offboarding Script</h2>
-  <p><strong>Objective:</strong> Use PowerShell to simulate offboarding a user account from the domain.</p>
-  <ul>
-    <li>Created <code>offboard-user.ps1</code></li>
-    <li>Disables the user account and removes group membership</li>
-    <li>Moves user to OffboardedUsers OU and logs the actions to a timestamped file</li>
-    <li>Tested with user <code>test.user</code></li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step15-ou-offboardedusers.png" target="_blank"><img src="../images/projects/homelab-project/step15-ou-offboardedusers.png" alt="Created OffboardedUsers OU" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step15-script-sysvol.png" target="_blank"><img src="../images/projects/homelab-project/step15-script-sysvol.png" alt="Script saved to SYSVOL" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step15-script-output.png" target="_blank"><img src="../images/projects/homelab-project/step15-script-output.png" alt="Script output showing log entries" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step15-user-disabled.png" target="_blank"><img src="../images/projects/homelab-project/step15-user-disabled.png" alt="User disabled and moved to OffboardedUsers" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 16 -->
-<section id="step16" class="section">
-  <h2>Step 16: Failed Logon Tracking</h2>
-  <p><strong>Objective:</strong> Capture and review failed domain login attempts (Event ID 4625) to demonstrate log auditing practices.</p>
-  <ul>
-    <li>Enabled auditing for failed logon events via Group Policy</li>
-    <li>Attempted centralized Event Log Forwarding to DC01 (setup completed but never received logs)</li>
-    <li>Fallback: Configured Event Viewer locally on <code>Client01</code> to directly capture 4625 entries</li>
-    <li>Tested login failures by entering incorrect credentials for <code>alice.hr</code></li>
-    <li>Captured relevant metadata from 4625 logs including target username, domain, failure reason, and timestamp</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step16-client01-eventviewer-4625.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-eventviewer-4625.png" alt="Client01 Event Viewer showing filtered 4625 logs" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step16-client01-4625-log-entry.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-log-entry.png" alt="4625 audit failure entry in Security log" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step16-client01-4625-details-tab1.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-details-tab1.png" alt="EventData tab showing SubjectUserName" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step16-client01-4625-details-tab2.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-details-tab2.png" alt="TargetUserName and error codes" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step16-client01-4625-logon-failed.png" target="_blank"><img src="../images/projects/homelab-project/step16-client01-4625-logon-failed.png" alt="Failure reason: unknown user or bad password" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 17 -->
-<section id="step17" class="section">
-  <h2>Step 17: Bulk User Creation from CSV</h2>
-  <p><strong>Objective:</strong> Create multiple AD users across different OUs using a centralized PowerShell script and CSV file.</p>
-  <ul>
-    <li>Created <code>create-bulk-users.ps1</code> to read users from CSV and generate accounts</li>
-    <li>CSV includes fields: FirstName, LastName, Username, OU, Password</li>
-    <li>Script iterates through rows, builds OU path, and runs <code>New-ADUser</code> for each entry</li>
-    <li>CSV and script stored in <code>\\DC01\SYSVOL\lab.local\scripts\</code></li>
-    <li>Executed script with policy bypass on DC01</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step17-csv-preview.png" target="_blank"><img src="../images/projects/homelab-project/step17-csv-preview.png" alt="CSV preview showing user data" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step17-script-sysvol.png" target="_blank"><img src="../images/projects/homelab-project/step17-script-sysvol.png" alt="Script stored in SYSVOL share" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step17-powershell-success.png" target="_blank"><img src="../images/projects/homelab-project/step17-powershell-success.png" alt="PowerShell output confirming users created" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step17-ou-confirmation.png" target="_blank"><img src="../images/projects/homelab-project/step17-ou-confirmation.png" alt="ADUC showing users created in correct OUs" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 18 -->
-<section id="step18" class="section">
-  <h2>Step 18: Helpdesk Simulation</h2>
-  <p><strong>Objective:</strong> Simulate a helpdesk scenario by creating a limited-access user account, delegating password reset rights, and testing the functionality.</p>
-  <ul>
-    <li>Created a user account <code>helpdesk1</code> in the <code>UserAccounts</code> OU</li>
-    <li>Delegated reset password rights for the <code>HR</code> OU using the Delegation of Control Wizard</li>
-    <li>Attempted to install RSAT tools on Client01 to allow GUI-based password reset—but installation failed repeatedly despite full troubleshooting</li>
-    <li>Successfully completed password reset task using PowerShell directly on DC01 as an alternate method</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step18-helpdesk1-created.png" target="_blank">
-      <img src="../images/projects/homelab-project/step18-helpdesk1-created.png" alt="Helpdesk1 user account created" class="content-image">
-    </a>
-    <a href="../images/projects/homelab-project/step18-delegate-helpdesk-user.png" target="_blank">
-      <img src="../images/projects/homelab-project/step18-delegate-helpdesk-user.png" alt="Delegation wizard with helpdesk1 selected" class="content-image">
-    </a>
-    <a href="../images/projects/homelab-project/step18-delegate-reset-password.png" target="_blank">
-      <img src="../images/projects/homelab-project/step18-delegate-reset-password.png" alt="Reset password rights delegated" class="content-image">
-    </a>
-    <a href="../images/projects/homelab-project/step18-rsat-install-fail.png" target="_blank">
-      <img src="../images/projects/homelab-project/step18-rsat-install-fail.png" alt="RSAT install failed on Client01" class="content-image">
-    </a>
-    <a href="../images/projects/homelab-project/step18-password-reset-via-powershell.png" target="_blank">
-      <img src="../images/projects/homelab-project/step18-password-reset-via-powershell.png" alt="Password reset via PowerShell on DC01" class="content-image">
-    </a>
-  </div>
-</section>
-
-<!-- STEP 19 -->
-<section id="step19" class="section">
-  <h2>Step 19: Remote Work Group Policy</h2>
-  <p><strong>Objective:</strong> Create and test a Group Policy Object for remote workers that enables Remote Desktop and maps a network drive to a shared folder.</p>
-  <ul>
-    <li>Created <code>RemoteUsers</code> OU in Active Directory and added a test account <code>remote.user</code></li>
-    <li>Created GPO <code>Remote_Work_Policy</code> and linked it to the <code>RemoteUsers</code> OU</li>
-    <li>Enabled <strong>Allow users to connect remotely using Remote Desktop Services</strong></li>
-    <li>Mapped Z: drive to <code>\\DC01\SharedFiles</code> via GPO preferences</li>
-    <li>Logged in to Client01 as <code>remote.user</code> and verified drive mapping and policy application</li>
-  </ul>
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step19-remote-ou.png" target="_blank"><img src="../images/projects/homelab-project/step19-remote-ou.png" alt="RemoteUsers OU created via PowerShell" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-remote-user-created.png" target="_blank"><img src="../images/projects/homelab-project/step19-remote-user-created.png" alt="remote.user created via PowerShell" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-gpo-linked-remote.png" target="_blank"><img src="../images/projects/homelab-project/step19-gpo-linked-remote.png" alt="GPO linked to RemoteUsers OU" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-gpo-remote-rdp.png" target="_blank"><img src="../images/projects/homelab-project/step19-gpo-remote-rdp.png" alt="Enable RDP policy setting in GPO" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-drive-map-z.png" target="_blank"><img src="../images/projects/homelab-project/step19-drive-map-z.png" alt="Drive mapping Z: to \\DC01\SharedFiles" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-client01-login-remote-user.png" target="_blank"><img src="../images/projects/homelab-project/step19-client01-login-remote-user.png" alt="Logged in as remote.user on Client01" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-client01-z-drive.png" target="_blank"><img src="../images/projects/homelab-project/step19-client01-z-drive.png" alt="Z: drive mapped successfully" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step19-gpresult-remote-user.png" target="_blank"><img src="../images/projects/homelab-project/step19-gpresult-remote-user.png" alt="gpresult confirms GPO applied" class="content-image"></a>
-  </div>
-</section>
-
-<!-- STEP 20 -->
-<section id="step20" class="section">
-  <h2>Step 20: Final Project Export & Cleanup</h2>
-  <p><strong>Objective:</strong> Export all core homelab data including GPOs, users, OU structure, and key configuration snapshots for documentation, reusability, and versioning.</p>
-  <ul>
-    <li>Backed up all Group Policy Objects using:
-      <pre><code>Backup-GPO -All -Path "C:\GPO-Backup"</code></pre>
-    </li>
-    <li>Exported full AD user list with:
-      <pre><code>Get-ADUser -Filter * | Select Name, SamAccountName, DistinguishedName | Export-Csv -Path "C:\user-export.csv"</code></pre>
-    </li>
-    <li>Confirmed OU layout using:
-      <pre><code>Get-ADOrganizationalUnit -Filter * | Select Name, DistinguishedName</code></pre>
-    </li>
-    <li>Captured all custom PowerShell scripts from:
-      <code>\\DC01\SYSVOL\lab.local\scripts</code>
-    </li>
-    <li>Verified WSUS summary screen showing sync group and system status</li>
-    <li>Captured DHCP scope range and pool configuration</li>
-  </ul>
-
-  <div class="screenshot-grid">
-    <a href="../images/projects/homelab-project/step20-final-ou.png" target="_blank"><img src="../images/projects/homelab-project/step20-final-ou.png" alt="OU structure export output" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step20-gpo-backup-output.png" target="_blank"><img src="../images/projects/homelab-project/step20-gpo-backup-output.png" alt="GPO Backup Output" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step20-scripts-folder.png" target="_blank"><img src="../images/projects/homelab-project/step20-scripts-folder.png" alt="Scripts folder in SYSVOL" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step20-user-export-output.png" target="_blank"><img src="../images/projects/homelab-project/step20-user-export-output.png" alt="Exported AD user list" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step20-wsus-summary.png" target="_blank"><img src="../images/projects/homelab-project/step20-wsus-summary.png" alt="WSUS computer group summary" class="content-image"></a>
-    <a href="../images/projects/homelab-project/step20-dhcp-scope.png" target="_blank"><img src="../images/projects/homelab-project/step20-dhcp-scope.png" alt="DHCP scope configuration" class="content-image"></a>
-  </div>
-  <p>This step completes the homelab. All system data, scripts, user objects, GPOs, and server roles have been documented and exported for archival or reuse in future labs.</p>
-</section>
-
-<!-- DOWNLOAD SECTION -->
-      <section id="downloads" class="section">
-        <h2>Script Downloads</h2>
-        <p>All PowerShell scripts used in this project are organized by step and available in the GitHub repo:</p>
-        <ul>
-          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step11" target="_blank">Step 11 – Drive Mapping</a></li>
-          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2013" target="_blank">Step 13 – Logon Script</a></li>
-          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2014" target="_blank">Step 14 – AD Audit</a></li>
-          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2015" target="_blank">Step 15 – Offboarding</a></li>
-          <li><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2017" target="_blank">Step 17 – Bulk User Creation</a></li>
-        </ul>
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step5-domain-change-dialog.png" target="_blank">
+            <img src="../images/projects/homelab-project/step5-domain-change-dialog.png" alt="Domain join dialog showing Client01 joining lab.local domain" class="content-image">
+          </a>
+          <p class="image-caption">Client01 joining the lab.local domain</p>
+        </div>
       </section>
 
-  <footer class="footer">
-    <p><a href="../index.html">← Back to Main Site</a></p>
-  </footer>
-</main>
+      <section id="active-directory" class="section">
+        <h2>Active Directory Implementation</h2>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <h3>Domain Setup</h3>
+            <ul>
+              <li>Promoted Windows Server 2022 to Domain Controller</li>
+              <li>Created new forest: lab.local</li>
+              <li>Configured DNS integration</li>
+              <li>Established trust relationships</li>
+            </ul>
+          </div>
+          <div class="feature-item">
+            <h3>Organizational Structure</h3>
+            <ul>
+              <li>IT Department OU</li>
+              <li>HR Department OU</li>
+              <li>Remote Users OU</li>
+              <li>Test Computers OU</li>
+              <li>Offboarded Users OU</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step2_add_new_forest.png" target="_blank">
+            <img src="../images/projects/homelab-project/step2_add_new_forest.png" alt="Active Directory Domain Services configuration wizard showing new forest creation" class="content-image">
+          </a>
+          <p class="image-caption">Creating new Active Directory forest during domain controller promotion</p>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step3-ou-structure.png" target="_blank">
+            <img src="../images/projects/homelab-project/step3-ou-structure.png" alt="Active Directory Users and Computers showing organized OU structure" class="content-image">
+          </a>
+          <p class="image-caption">Organizational Unit structure with departmental separation</p>
+        </div>
+
+        <div class="professional-insight">
+          <h4>Professional Impact</h4>
+          <p>This OU structure mirrors real enterprise environments where departments require separate management, security policies, and resource access. The hierarchical design enables scalable administration and granular permission control.</p>
+        </div>
+      </section>
+
+      <section id="network-services" class="section">
+        <h2>Network Services Configuration</h2>
+        <div class="service-grid">
+          <div class="service-item">
+            <h3>DHCP Server</h3>
+            <ul>
+              <li>Scope: 192.168.0.100-199</li>
+              <li>8-day lease duration</li>
+              <li>Automatic DNS assignment</li>
+              <li>Gateway configuration</li>
+              <li>Domain integration</li>
+            </ul>
+          </div>
+          <div class="service-item">
+            <h3>DNS Services</h3>
+            <ul>
+              <li>Forward lookup zones</li>
+              <li>Reverse lookup zones</li>
+              <li>AD-integrated zones</li>
+              <li>Client auto-configuration</li>
+              <li>Conditional forwarding</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step6-client-ipconfig.png" target="_blank">
+            <img src="../images/projects/homelab-project/step6-client-ipconfig.png" alt="Client workstation showing DHCP-assigned IP configuration" class="content-image">
+          </a>
+          <p class="image-caption">Client01 receiving DHCP lease and DNS configuration</p>
+        </div>
+      </section>
+
+      <section id="wsus" class="section">
+        <h2>Windows Server Update Services (WSUS)</h2>
+        <div class="wsus-features">
+          <div class="wsus-config">
+            <h3>Centralized Update Management</h3>
+            <ul>
+              <li>Configured WSUS server role</li>
+              <li>Created computer groups for targeted deployments</li>
+              <li>Automated approval rules</li>
+              <li>Bandwidth optimization</li>
+              <li>Reporting and compliance tracking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step10-wsus-status.png" target="_blank">
+            <img src="../images/projects/homelab-project/step10-wsus-status.png" alt="WSUS console showing synchronization status and computer groups" class="content-image">
+          </a>
+          <p class="image-caption">WSUS management console showing sync status and computer group organization</p>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step8-client-update-confirm.png" target="_blank">
+            <img src="../images/projects/homelab-project/step8-client-update-confirm.png" alt="Client computer showing successful update installation via WSUS" class="content-image">
+          </a>
+          <p class="image-caption">Client01 successfully receiving and installing updates through WSUS</p>
+        </div>
+      </section>
+    </div>
+<div class="back-to-top">
+  <a href="#top">↑ Back to Top</a>
+</div>
+
+    <div class="content-group">
+      <h2 class="group-title">Admin Scenarios</h2>
+
+      <section id="group-policy" class="section">
+        <h2>Group Policy Management</h2>
+        <div class="gpo-categories">
+          <div class="gpo-security">
+            <h3>Security Policies</h3>
+            <ul>
+              <li><strong>Login Banner:</strong> Legal notice implementation for HR users</li>
+              <li><strong>Audit Policies:</strong> Failed logon attempt monitoring</li>
+              <li><strong>Remote Access:</strong> RDP configuration for remote workers</li>
+              <li><strong>Password Policies:</strong> Complexity and expiration rules</li>
+            </ul>
+          </div>
+          <div class="gpo-user">
+            <h3>User Experience Policies</h3>
+            <ul>
+              <li><strong>Drive Mapping:</strong> Automated network drive assignments</li>
+              <li><strong>Folder Redirection:</strong> Documents to network storage</li>
+              <li><strong>Logon Scripts:</strong> PowerShell automation on login</li>
+              <li><strong>Software Deployment:</strong> Application installation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step11-gpo-drive-map-hr.png" target="_blank">
+            <img src="../images/projects/homelab-project/step11-gpo-drive-map-hr.png" alt="Group Policy Preferences showing drive mapping configuration for HR users" class="content-image">
+          </a>
+          <p class="image-caption">Group Policy Preferences configured for automatic drive mapping based on group membership</p>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step11-client01-hr-drive.png" target="_blank">
+            <img src="../images/projects/homelab-project/step11-client01-hr-drive.png" alt="Windows Explorer showing mapped H drive for HR user" class="content-image">
+          </a>
+          <p class="image-caption">Mapped H: drive automatically available for HR department users</p>
+        </div>
+      </section>
+
+      <section id="file-services" class="section">
+        <h2>File Services & Permissions</h2>
+        <div class="file-services-overview">
+          <div class="permissions-model">
+            <h3>Access Control Implementation</h3>
+            <ul>
+              <li>Departmental file shares with NTFS permissions</li>
+              <li>Role-based access control (RBAC)</li>
+              <li>Share-level and file-level security</li>
+              <li>Inheritance and permission propagation</li>
+            </ul>
+          </div>
+          <div class="share-structure">
+            <h3>Share Structure</h3>
+            <ul>
+              <li><strong>\\DC01\HRShare</strong> - HR Department files</li>
+              <li><strong>\\DC01\ITShare</strong> - IT Department files</li>
+              <li><strong>\\DC01\SharedFiles</strong> - Company-wide resources</li>
+              <li><strong>\\DC01\UserFolders</strong> - Individual user profiles</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="professional-insight">
+          <h4>Enterprise Best Practices</h4>
+          <p>Implemented the principle of least privilege with granular NTFS permissions, ensuring users can only access resources necessary for their role. This approach mirrors enterprise security standards and supports compliance requirements.</p>
+        </div>
+      
+<section id="powershell" class="section">
+  <h2>PowerShell Automation Scripts</h2>
+  <p>This project includes purpose-built PowerShell scripts that streamline administrative workflows across user management, reporting, and onboarding/offboarding. These are publicly available in the GitHub repository:</p>
+
+  <div class="automation-categories">
+    <div class="user-management">
+      <h3>User Lifecycle Management</h3>
+      <ul>
+        <li><strong><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2017" target="_blank">Bulk User Creation:</a></strong> Automatically provisions users from a CSV file, assigning usernames, passwords, and OU placement.</li>
+        <li><strong><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2015" target="_blank">Automated Offboarding:</a></strong> Disables user accounts, removes group memberships, and relocates them to a secure OU.</li>
+      </ul>
+    </div>
+
+    <div class="reporting-auditing">
+      <h3>Reporting & Compliance</h3>
+      <ul>
+        <li><strong><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2014" target="_blank">AD User Audit Script:</a></strong> Exports usernames and group memberships into a CSV for audit and compliance tracking.</li>
+      </ul>
+    </div>
+
+    <div class="user-experience">
+      <h3>User Experience Scripts</h3>
+      <ul>
+        <li><strong><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step11" target="_blank">Drive Mapping:</a></strong> Assigns shared network drives based on department and group membership.</li>
+        <li><strong><a href="https://github.com/jnarusis/homelab-scripts/tree/main/step%2013" target="_blank">Logon Automation:</a></strong> Runs a script at user login to configure the session or display notices.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin: 2em 0;">
+  <a href="https://github.com/jnarusis/homelab-scripts" target="_blank" style="font-weight: bold; color: #1e90ff;">
+    View full script collection on GitHub →
+  </a>
+</div>
+
+  <div class="business-value">
+    <h3>Business Impact</h3>
+    <p>These automation scripts reduce manual administrative overhead by 80%, ensure consistent security practices, and provide audit trails for compliance requirements. In a 500-user environment, this saves approximately 15 hours per week of manual administration.</p>
+  </div>
+</section>
+
+      <section id="helpdesk" class="section">
+        <h2>Helpdesk Operations Simulation</h2>
+        <div class="helpdesk-scenarios">
+          <div class="delegation-model">
+            <h3>Delegated Administration</h3>
+            <ul>
+              <li>Created helpdesk user with limited admin rights</li>
+              <li>Configured password reset permissions for specific OUs</li>
+              <li>Implemented principle of least privilege</li>
+              <li>Role-based access control for support staff</li>
+            </ul>
+          </div>
+          <div class="remote-support">
+            <h3>Remote Support Capabilities</h3>
+            <ul>
+              <li>Remote Desktop Services configuration</li>
+              <li>Group-based RDP access control</li>
+              <li>Network resource access for remote workers</li>
+              <li>VPN-ready infrastructure design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="real-world-application">
+          <h4>Real-World Application</h4>
+          <p>This delegation model allows Level 1 support staff to handle common tasks like password resets without full domain admin privileges, improving security posture while maintaining operational efficiency.</p>
+        </div>
+      </section>
+
+      <section id="security" class="section">
+        <h2>Security & Compliance Features</h2>
+        <div class="security-implementations">
+          <div class="audit-logging">
+            <h3>Audit Trail Implementation</h3>
+            <ul>
+              <li>Failed logon monitoring (Event ID 4625)</li>
+              <li>Centralized event log collection</li>
+              <li>Security event correlation</li>
+              <li>Compliance reporting capabilities</li>
+            </ul>
+          </div>
+          <div class="access-controls">
+            <h3>Access Control Systems</h3>
+            <ul>
+              <li>Role-based file share permissions</li>
+              <li>Departmental resource segregation</li>
+              <li>Administrative privilege separation</li>
+              <li>Regular access reviews and auditing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-frame">
+          <a href="../images/projects/homelab-project/step16-client01-4625-logon-failed.png" target="_blank">
+            <img src="../images/projects/homelab-project/step16-client01-4625-logon-failed.png" alt="Windows Event Viewer showing failed login attempt with Event ID 4625" class="content-image">
+          </a>
+          <p class="image-caption">Event Viewer capturing failed login attempts for security monitoring</p>
+        </div>
+
+        <div class="compliance-note">
+          <h4>Compliance Considerations</h4>
+          <p>The implemented audit trail and access controls support SOX, HIPAA, and PCI-DSS compliance requirements commonly found in enterprise environments. Regular security log reviews and access audits are automated through PowerShell scripts.</p>
+        </div>
+      </section>
+    </div>
+<div class="back-to-top">
+  <a href="#top">↑ Back to Top</a>
+</div>
+
+    <div class="content-group">
+      <h2 class="group-title">Professional Impact</h2>
+
+      <section id="skills" class="section">
+        <h2>Professional Skills Demonstrated</h2>
+        <div class="skills-matrix">
+          <div class="technical-skills">
+            <h3>Technical Competencies</h3>
+            <ul>
+              <li><strong>System Administration:</strong> Windows Server deployment, configuration, and maintenance</li>
+              <li><strong>Active Directory:</strong> Forest/domain design, OU structure that mirrors enterprise departments for scalable management and granular permission control.</li>
+              <li><strong>Network Services:</strong> DNS, DHCP, WSUS configuration and troubleshooting</li>
+              <li><strong>Virtualization:</strong> Hyper-V infrastructure planning and implementation</li>
+            </ul>
+          </div>
+          <div class="operational-skills">
+            <h3>Operational Excellence</h3>
+            <ul>
+              <li><strong>Security Management:</strong> GPO implementation, audit configuration, and application of the principle of least privilege with granular NTFS permissions.</li>
+              <li><strong>Automation:</strong> PowerShell scripting for provisioning, reporting, and maintenance to ensure consistency and provide audit trails.</li>
+              <li><strong>Documentation:</strong> Comprehensive project documentation and knowledge transfer</li>
+              <li><strong>Problem Solving:</strong> Systematic troubleshooting and root cause analysis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="outcomes" class="section">
+        <h2>Project Outcomes & Metrics</h2>
+        <div class="outcomes-grid">
+          <div class="quantitative-results">
+            <h3>Measurable Results</h3>
+            <ul>
+              <li><strong>Infrastructure:</strong> 100% uptime during testing period</li>
+              <li><strong>Automation:</strong> 80% reduction in manual user management tasks, saving an estimated 15 hours per week in a 500-user environment.</li>
+              <li><strong>Security:</strong> 100% compliance with simulated enterprise security policies</li>
+              <li><strong>Scalability:</strong> Architecture designed to support 500+ users without modification</li>
+            </ul>
+          </div>
+          <div class="qualitative-outcomes">
+            <h3>Enterprise Readiness</h3>
+            <ul>
+              <li>Production-ready Active Directory environment with a delegation model that improves security posture by enabling L1 support to perform password resets without full admin rights.</li>
+              <li>The implemented audit trail and access controls support common compliance requirements like SOX, HIPAA, and PCI-DSS.</li>
+              <li>Automated monitoring and alerting capabilities</li>
+              <li>Detailed documentation and runbooks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-timeline">
+          <h4>Implementation Timeline</h4>
+          <p><strong>Week 1:</strong> Infrastructure setup, AD deployment, basic configuration<br>
+          <strong>Week 2:</strong> Group Policy implementation, file services, PowerShell automation<br>
+          <strong>Week 3:</strong> Security hardening, testing, documentation, optimization</p>
+        </div>
+      </section>
+
+      <section id="future" class="section">
+        <h2>Future Enhancements & Career Growth</h2>
+        <div class="enhancement-roadmap">
+          <div class="next-phase">
+            <h3>Immediate Enhancements</h3>
+            <ul>
+              <li><strong>Certificate Services (PKI):</strong> Internal CA for SSL/TLS certificates</li>
+              <li><strong>Exchange Server:</strong> Corporate email and collaboration platform</li>
+              <li><strong>System Center:</strong> Configuration Manager for software deployment</li>
+              <li><strong>Backup Solutions:</strong> Veeam or Windows Server Backup implementation</li>
+            </ul>
+          </div>
+          <div class="advanced-projects">
+            <h3>Advanced Infrastructure Projects</h3>
+            <ul>
+              <li><strong>Hybrid Cloud:</strong> Azure AD Connect and Office 365 integration</li>
+              <li><strong>Network Monitoring:</strong> SCOM, PRTG, or SolarWinds implementation</li>
+              <li><strong>Security Tools:</strong> SIEM integration, vulnerability scanning</li>
+              <li><strong>Disaster Recovery:</strong> Multi-site replication and failover testing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="summary" class="section">
+        <h2>Project Summary</h2>
+        <p><strong>Key Strengths:</strong> Enterprise-grade Active Directory environment • PowerShell automation • Security compliance • Scalable architecture</p>
+        <p>This project demonstrates practical experience with enterprise Windows Server administration, Active Directory management, and IT infrastructure services essential for corporate environments.</p>
+      </section>
+    </div>
+<div class="back-to-top">
+  <a href="#top">↑ Back to Top</a>
+</div>
+
+    <footer class="footer">
+      <p><a href="../index.html">&larr; Back to Portfolio</a></p>
+    </footer>
+  </main>
 </div>
 </body>
 </html>

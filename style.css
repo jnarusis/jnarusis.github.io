@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
 /* Normalize fonts and layout */
 html {
   font-size: 16px;
@@ -283,35 +289,36 @@ hr {
   margin: 0.5rem 0 1.5rem;
 }
 
-/* Collapsible sidebar sections */
-.sidebar details {
-  all: unset;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.sidebar summary {
+/* --- Sidebar collapsible section styling --- */
+ .sidebar summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
   color: #b3b3b3;
-  padding: 8px 0;
-  text-align: center;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar summary:hover {
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.sidebar details[open] summary {
-  margin-bottom: 0.25rem;
+.sidebar summary::marker {
+  font-size: 1rem;
+  color: #888;
 }
 
+
+/* Sub-links under each section — align under centered headings */
 .sidebar details ul {
   list-style: none;
-  margin: 0;
   padding-left: 0;
+  margin-top: 0.4rem;
 }
 
 .sidebar details ul li {
@@ -322,10 +329,29 @@ hr {
   color: #b3b3b3;
   text-decoration: none;
   display: block;
-  padding: 6px 0;
-  transition: color 0.3s;
+  padding: 6px 32px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: left;
+  border-left: 2px solid transparent;
+  transition: all 0.3s;
 }
 
 .sidebar details ul li a:hover {
   color: #ffffff;
+  border-left: 2px solid #1e90ff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.back-to-top {
+  text-align: right;
+  margin: -2em 0 3em 0; /* pull it up a bit closer, then push rest down */
+  font-size: 0.9em;
+}
+.back-to-top a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+.back-to-top a:hover {
+  text-decoration: underline;
 }
