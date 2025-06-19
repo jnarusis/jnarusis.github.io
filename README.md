@@ -6,13 +6,13 @@ This repository contains the source code for my personal portfolio website, buil
 
 ---
 
-## 📄 Overview
+## Overview
 
 The site presents selected projects, certification summaries, and documentation supporting my transition into IT infrastructure, cloud computing, and systems administration. All content is written and maintained by me.
 
 ---
 
-## 🛠️ Technologies
+##  Technologies
 
 - HTML & CSS (hand-coded)
 - Git & GitHub for version control
@@ -20,7 +20,7 @@ The site presents selected projects, certification summaries, and documentation 
 
 ---
 
-## 🔁 Usage
+## Usage
 
 To clone and view the site locally:
 
@@ -32,6 +32,6 @@ Then open `index.html` in a browser.
 
 ---
 
-## 📬 Contact
+## Contact
 
 Visit the [Contact](https://jnarusis.github.io/#contact) section of the site.
